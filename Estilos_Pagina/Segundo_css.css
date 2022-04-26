@@ -1,0 +1,103 @@
+/*Fondo Principal*/
+
+
+body
+{
+    background-color: rgb(80, 173, 80);
+    background-image: url("/home/fran/Escritorio/Lab Cmpu/6348.jpg");
+    background-repeat: repeat;
+    background-size:contain;
+    background-attachment: scroll;
+
+    font-size:larger;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+header{
+    background-color: rgb(240, 125, 42); 
+
+}
+
+h1{color: white; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 25%;
+     
+}
+
+h2,h3{color: white; 
+    background-color: rgb(240, 125, 42); 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    height: 40px; 
+}
+
+
+/*Descrpicion Historia*/
+
+.Descripcion_Historia{
+    background-color: white;
+    margin: 15px 15px 30px 15px;
+    padding-bottom: 35%;
+}
+
+.Descripcion_Historia p
+{
+    text-align:justify;
+    width: 45%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+   
+}
+
+.Ilustracion_1
+{ 
+    width: 45%;
+    float:right;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-left: 10px;
+
+    object-fit: contain;
+}
+
+/*Seccion: Que es el codigo de colores */
+
+.Quescodigodecolores 
+{
+    background-color: white;
+    padding-bottom: 35%;
+
+}
+
+.Quescodigodecolores p
+{
+    /*column-count: 2;
+    column-gap: 50px;*/
+
+    text-align:justify;
+    width: 45%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+
+
+}
+
+.Ilustracion_2
+{
+    width: 45%;
+    float:right;
+    padding-left: 10px;
+    margin-right: 40px;
+    object-fit: contain;
+}
+
+/*Calculadora de Resistrnecias */
+
+.Calc_Resistencias
+{
+    background-color: white;
+}

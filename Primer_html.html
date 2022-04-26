@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Rodrigo Davila Francisco Gomez" name="author">
+    <meta content="html, cabeceras, etiquetas" name="keywords">
+    <link rel="stylesheet" href="Estilos_Pagina/Segundo_css.css" type="text/css">
+    <title>Calculadora de Resistencia </title>
+</head>
+<body>
+<header>
+    
+    <h1>RESISTENCIAS ELECTRICAS</h1>
+</header> 
+<section> 
+
+<div class="Descripcion_Historia">
+<p>
+    Se le denomina resistencia eléctrica a la oposición al flujo de corriente eléctrica a través de un conductor.
+    ​ La unidad de resistencia en el Sistema Internacional es el ohmio y se representa con la letra griega Omega Ω, en honor al físico alemán <i>Georg Simon Ohm</i>, quien descubrió el principio que ahora lleva su nombre. En la actualidad este componente se encuentra en casi todos los dispositivos electronicos.
+</p>
+   
+<img class= "Ilustracion_1" src="/home/fran/Escritorio/Lab Cmpu/Ilustracion.jpg">
+
+
+</div>
+
+
+
+<!--Seccion Codigo de Colores:-->
+
+<h3>
+    <b>¿Qué son los códigos de colores de una resistencia eléctrica?</b>
+</h3>
+
+
+<div class="Quescodigodecolores">
+
+
+<p>
+    Podemos encontrar muchos diferentes tipos de resistencias disponibles, para identificar o calcular el valor de una resistencia es importante tener un sistema de marcado o utilizando un aparato de medición como lo es el óhmetro. El código de color de la resistencia es una forma de representar el valor en conjunto con la tolerancia.
+    Los estándares para los registros de codificación de colores se definen en las normas internacionales IEC 60062, este estándar describe la codificación de colores para resistencias con extremos axiales y el código numérico para resistencias SMD.<br>
+
+    <u>Existen varias bandas para especificar el valor de la resistencia. Incluso se especifican la tolerancia, confiabilidad y tasa de falla. La cantidad de bandas varía de tres a seis.
+    </u><br>
+</p>
+
+
+<img class="Ilustracion_2" src="/home/fran/Escritorio/Lab Cmpu/resistors.jpg">
+
+</div>
+
+
+<h3>Calculadora de Resistencias Fijas </h3>
+
+<div class="Calc_Resistencias">
+
+<p>Eliga el numero de bandas</p>
+<input type="checkbox" name="Bandas_1" value="3 Bandas">3 Bandas
+<input type="checkbox" name="Bandas_2" value="4 Bandas">4 Bandas
+<input type="checkbox" name="Bandas_3" value="5 Bandas">5 Bandas
+
+<br>
+<br>
+
+<select name="Colores de Banda">
+    <option value="Negro">Negro</option>
+    <option value="Marron">Marron</option>
+    <option value="Rojo">Rojo</option>
+    <option value="Amarillo">Amarillo</option>
+    <option value="Verde">Verde</option>
+</select>
+
+<select name="Colores de Banda">
+    <option value="Negro">Negro</option>
+    <option value="Marron">Marron</option>
+    <option value="Rojo">Rojo</option>
+    <option value="Amarillo">Amarillo</option>
+    <option value="Verde">Verde</option>
+</select>
+
+<select name="Colores de Banda">
+    <option value="Negro">Negro</option>
+    <option value="Marron">Marron</option>
+    <option value="Rojo">Rojo</option>
+    <option value="Amarillo">Amarillo</option>
+    <option value="Verde">Verde</option>
+</select>
+
+<p>ELiga rango de potencia</p>
+<input type="range" id="a" name="a" value="50" min="0" max="129">
+
+
+</div>
+
+
+<h3>Prueba boton</h3>
+<button type="button">Aprietame!!</button>
+
+<h3>Linea de campo de texto</h3>
+<p>Escriba Color primera banda</p>
+<input type="text" name="Color Primera banda">
+<p>Escriba Color de segunda banda</p>
+<input type="text" name="Color segunda banda">
+
+</section>
+<footer>
+<b>Rodrigo Davila, Francisco Gomez</b>
+</footer>   
+
+</html>
