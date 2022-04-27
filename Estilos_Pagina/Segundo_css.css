@@ -16,13 +16,14 @@ body
 
 
 header{
-    background-color: rgb(240, 125, 42); 
+    
 
 }
 
 h1{color: white; 
+    background-color: rgb(240, 125, 42);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 25%;
+    padding-left: 25%;
      
 }
 
@@ -30,7 +31,37 @@ h2,h3{color: white;
     background-color: rgb(240, 125, 42); 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100%;
-    height: 40px; 
+    height: 40px;
+    padding-left: 20px;
+   
+}
+
+h4{
+    color:rgb(240, 125, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 20px;
+   padding-top: 20px;
+   padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+  
+ul li {
+    display: inline;
+    padding-left:30px;
+    padding-right:30px;
+    
+}
+
+
+.indice
+{
+
+    background-color: white;
+
 }
 
 
@@ -105,11 +136,11 @@ h2,h3{color: white;
 
 .Calc_Resistencias p 
 {
-    text-align:justify;
+    /*text-align:justify;
     width: 50%;
     float: left;
     margin-left: 20px;
-    margin-top: 50px;
+    margin-top: 50px;*/
 }
 
 .Ilustracion_3
@@ -123,10 +154,10 @@ h2,h3{color: white;
 
 .Calc_Resistencias :in-range
 {
-    width: 50%;
+    /*width: 50%;
     float: left;
     margin-left: 20px;
-    margin-top: 50px; 
+    margin-top: 50px; */
 }
 
 .Calc_Resistencias:in-checkbox
