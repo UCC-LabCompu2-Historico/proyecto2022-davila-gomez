@@ -39,7 +39,7 @@ h2,h3{color: white;
 .Descripcion_Historia{
     background-color: white;
     margin: 15px 15px 30px 15px;
-    padding-bottom: 35%;
+    padding-bottom: 32%;
 }
 
 .Descripcion_Historia p
@@ -100,4 +100,40 @@ h2,h3{color: white;
 .Calc_Resistencias
 {
     background-color: white;
+    padding-bottom: 45%;
 }
+
+.Calc_Resistencias p 
+{
+    text-align:justify;
+    width: 50%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.Ilustracion_3
+{
+    width: 40%;
+    float:right;
+    padding-left: 10px;
+    margin-right: 40px;
+    object-fit: contain;
+}
+
+.Calc_Resistencias :in-range
+{
+    width: 50%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px; 
+}
+
+.Calc_Resistencias:in-checkbox
+{
+    width: 50%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px; 
+}
+
