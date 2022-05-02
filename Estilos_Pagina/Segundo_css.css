@@ -1,5 +1,9 @@
 /*Fondo Principal*/
 
+html
+{
+    scroll-behavior: smooth;
+}
 
 body
 {
@@ -126,45 +130,61 @@ ul li {
     object-fit: contain;
 }
 
+
+
+
+
 /*Calculadora de Resistrnecias */
 
 .Calc_Resistencias
 {
     background-color: white;
-    padding-bottom: 45%;
+    padding-bottom: 50%;
+
 }
 
 .Calc_Resistencias p 
 {
-    /*text-align:justify;
+    text-align:justify;
+    width: 100%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+
+#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Barra_de_Tolerancia
+{
+   
     width: 50%;
     float: left;
     margin-left: 20px;
-    margin-top: 50px;*/
+    margin-top: 25px;
 }
 
-.Ilustracion_3
+#Cuantas_Bandas
 {
-    width: 40%;
-    float:right;
-    padding-left: 10px;
-    margin-right: 40px;
-    object-fit: contain;
-}
-
-.Calc_Resistencias :in-range
-{
-    /*width: 50%;
-    float: left;
     margin-left: 20px;
-    margin-top: 50px; */
+    margin-top: 25px;
 }
 
-.Calc_Resistencias:in-checkbox
+
+#Resistencia_Colores
 {
+    
+    float: right;
+    background-color: grey;
+}
+
+
+
+
+/*Footer*/
+
+footer
+{
+    color: white;
     width: 50%;
-    float: left;
-    margin-left: 20px;
-    margin-top: 50px; 
+    background-color:black;
 }
 

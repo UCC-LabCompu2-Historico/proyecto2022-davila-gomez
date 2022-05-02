@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta content="Rodrigo Davila Francisco Gomez" name="author">
     <meta content="html, cabeceras, etiquetas" name="keywords">
-    <link rel="stylesheet" href="Estilos_Pagina/Segundo_css.css" type="text/css">
     <title>Calculadora de Resistencia </title>
 </head>
+
+<nav>
+    <link rel="stylesheet" href="Estilos_Pagina/Segundo_css.css" type="text/css">
+</nav>
+
+
+<!--Body de la pagina-->
+
+
 <body>
 <header>
     
@@ -16,19 +24,22 @@
 
     <h4>Indice</h4>
 
-    <ul><li>Definicion</li>
+    <ul>
+        <a href="#Definicion"><li>Definicion</li></a>
        
-        <li>Codigo de Colores</li>
+        <a href="#Codigo_Colores"><li>Codigo de Colores</li></a>
        
-        <li>Calculadora de Resistencia</li>
+        <a href="#Calculadora"><li>Calculadora de Resistencia</li></a>
     </ul>
     
     </div>    
 
 </header> 
+
 <section> 
 
-<h3>Definicion</h3>
+<h3 id="Definicion">Definicion</h3>
+
 <div class="Descripcion_Historia">
 <p>
     Se le denomina <b>resistencia eléctrica</b> a la oposición al flujo de corriente eléctrica a través de un conductor.
@@ -36,7 +47,7 @@
 </p>
 
    
-<img class= "Ilustracion_1" src="/home/fran/Escritorio/Lab Cmpu/Ilustracion.jpg">
+<img class= "Ilustracion_1" src="/home/fran/Escritorio/Lab Cmpu/Ilustracion.jpg" alt="Ilustracion de Resistencia fija de 10000 ohm">
 
 
 </div>
@@ -45,7 +56,7 @@
 
 <!--Seccion Codigo de Colores:-->
 
-<h3>
+<h3 id="Codigo_Colores">
     <b>¿Qué son los códigos de colores de una resistencia eléctrica?</b>
 </h3>
 
@@ -62,49 +73,28 @@
 </p>
 
 
-<img class="Ilustracion_2" src="/home/fran/Escritorio/Lab Cmpu/resistors.jpg">
+<img class="Ilustracion_2" src="/home/fran/Escritorio/Lab Cmpu/resistors.jpg" alt="Imagen de una tabla correspondiente al Codigo de colores de las resistecnias fijas">
 
 </div>
 
 
-<h3>Calculadora de Resistencias Fijas </h3>
+<h3 id="Calculadora">Calculadora de Resistencias Fijas </h3>
 
 
 <!--Calculadora de Resistencias:-->
 
 <div class="Calc_Resistencias">
 
-<p>Eliga el numero de bandas</p>
+<label for="Cuantas_Bandas"><p>Eliga el numero de bandas</p></label>
 
-<input type="checkbox" name="Bandas_1" value="3 Bandas">3 Bandas
-<input type="checkbox" name="Bandas_2" value="4 Bandas">4 Bandas
-<input type="checkbox" name="Bandas_3" value="5 Bandas">5 Bandas
+<input type="checkbox" name="Bandas_1" id="Cuantas_Bandas" value="3 Bandas">3 Bandas
+<input type="checkbox" name="Bandas_2" id="Cuantas_Bandas" value="4 Bandas">4 Bandas
+<input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas
 
-<br>
-<br>
-    <p>Eliga Color de Primera banda</p>
-    <select name="Colores de Banda">
-        <option value="Negro">Negro</option>
-        <option value="Marron">Marron</option>
-        <option value="Rojo">Rojo</option>
-        <option value="Amarillo">Amarillo</option>
-        <option value="Verde">Verde</option>
-    </select>
-<br>
 
-    <p>Eliga Color de Segunda banda</p>
-    <select name="Colores de Banda">
-        <option value="Negro">Negro</option>
-        <option value="Marron">Marron</option>
-        <option value="Rojo">Rojo</option>
-        <option value="Amarillo">Amarillo</option>
-        <option value="Verde">Verde</option>
-    </select>
-<br>
 
-    <p>Eliga Color banda Multiplicador</p>
-
-    <select name="Colores de Banda">
+   <label for="Color_Primera_Banda"> <p>Eliga Color de Primera banda</p> </label>
+    <select name="Colores de Banda" id="Color_Primera_Banda">
         <option value="Negro">Negro</option>
         <option value="Marron">Marron</option>
         <option value="Rojo">Rojo</option>
@@ -112,38 +102,65 @@
         <option value="Verde">Verde</option>
     </select>
 
-<br>
 
-<p>ELiga Tolerancia - Rango de potencia</p>
-<input type="range" id="a" name="a" value="50" min="0" max="129">
+    <label for="Color_segunda_banda"></label><p>Eliga Color de Segunda banda</p></label>
+    <select name="Colores de Banda" id="Color_segunda_banda">
+        <option value="Negro" >Negro</option>
+        <option value="Marron">Marron</option>
+        <option value="Rojo">Rojo</option>
+        <option value="Amarillo">Amarillo</option>
+        <option value="Verde">Verde</option>
+    </select>
 
 
-<img class="Ilustracion_3" src="/home/fran/Escritorio/Lab Cmpu/7777.png">
+    <label for="Banda_Multiplicador"><p>Eliga Color banda Multiplicador</p></label>
+
+    <select name="Colores de Banda" id="Banda_Multiplicador">
+        <option value="Negro" >Negro</option>
+        <option value="Marron">Marron</option>
+        <option value="Rojo" >Rojo</option>
+        <option value="Amarillo" >Amarillo</option>
+        <option value="Verde" >Verde</option>
+    </select>
+
+
+
+<Label for="Barra_de_Toleracia"><p>ELiga Tolerancia - Rango de potencia</p></Label>
+<input type="range" id="Barra_de_Tolerancia" name="Rango" value="50" min="0" max="129">
+
+
+<label for="Boton_para_Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
+<button type="button" id="Boton_para_Calcular">Calcular</button>
+
+
+
 
 </div>
 
-
-<!--Quieres un Reto :-->
-
-
-<h3>Prueba boton</h3>
-<button type="button">Aprietame!!</button>
-
-<h3>Linea de campo de texto</h3>
-<p>Escriba Color primera banda</p>
-<input type="text" name="Color Primera banda">
-<p>Escriba Color de segunda banda</p>
-<input type="text" name="Color segunda banda">
-
+<canvas id="Resistencia_Colores" width="150px" height="150px"></canvas>
 
 </section>
 
 
-<!--Quienes somos:-->
+<!--Quienes somos- LogoUcc Footer -->
 
 
 <footer>
-<b>Rodrigo Davila, Francisco Gomez</b>
+<b>Alumnos: 
+    <ul>
+        <li>Rodrigo Davila</li>
+        <li>Francisco Gomez</li>
+    </ul>
+</b>
+
+<b>Contactos:
+    <br>
+    <a href="mailto:212932@ucc.edu.ar">212932@ucc.edu.ar</a>
+    <br>
+    <a href="mailto:212932@ucc.edu.ar">212932@ucc.edu.ar</a>
+</b>
+
+<img class="Ilustracion_3" src="/logo-ucc-2018.png" alt="Logo de la univercidad Catolica de Cordoba">
 </footer>   
 
 </html>
