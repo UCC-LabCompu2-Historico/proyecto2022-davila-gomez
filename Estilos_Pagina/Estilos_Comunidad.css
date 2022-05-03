@@ -1,0 +1,354 @@
+/*Fondo Principal*/
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: rgb(80, 173, 80);
+    background-image: url("/home/fran/Escritorio/Proyecto2022-Davila-Gomez/Ilustraciones/6348.jpg");
+    background-repeat: repeat;
+    background-size:contain;
+    background-attachment: scroll;
+
+    font-size:larger;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+
+
+
+h1{color: white; 
+    background-color: rgb(240, 125, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 17%;
+     
+}
+
+h2,h3{color: white; 
+    background-color: rgb(240, 125, 42); 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    margin: 15px 15px 30px 10px;
+   
+}
+
+h4{
+    color:rgb(240, 125, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 20px;
+   padding-top: 20px;
+   padding-bottom: 5px;
+   text-align: center;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+  
+ul li {
+    display: inline;
+    padding-left:30px;
+    padding-right:30px;
+    
+}
+
+.indice
+{
+
+    background-color: white;
+    margin: 15px 15px 30px 15px;
+
+}
+
+.indice ul
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+.indice a:link,  a:visited
+{
+    color: rgb(240, 125, 42);
+    text-decoration: none;
+}
+
+.indice a:hover, a:active
+{
+    color:rgb(80, 173, 80) ;
+    text-size-adjust: large;
+}
+
+/*Footer*/
+
+footer
+{
+    
+    margin-top: 20px;
+    margin-left: 5px;
+    color:black;
+    padding-bottom: 35%;
+    background-color:white;
+    margin: 15px 15px 30px 15px;
+}
+
+.f-Alumnos
+{
+    width: 50%;
+    float: left;
+
+
+}
+
+.f-Alumnos p
+{
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    margin-left:15px;
+
+}
+
+.f-Alumnos a
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    margin-left:15px;
+}
+
+.f-Alumnos a:link,  a:visited
+{
+    color: rgb(240, 125, 42);
+    text-decoration: none;
+}
+
+.f-Alumnos a:hover, a:active
+{
+    color:rgb(80, 173, 80) ;
+    text-size-adjust: large;
+}
+
+.f-Alumnos h4
+{
+    color:rgb(240, 125, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    margin-left:10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.f-Alumnos ul
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+.f-Institucion h4
+{
+    color:rgb(240, 125, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    
+}
+
+.f-Institucion
+{
+    width: 45%;
+    float: right;
+}
+
+
+/*Hasta aqui mantiene caracteristicas del index */
+/*Comunidad:*/
+
+.Temas
+{
+    background-color:rgb(240, 125, 42);
+    
+
+}
+
+.Resistencias h4
+{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+.Resistencias h4:hover, h4:active
+{
+    color:rgb(63, 224, 63);
+    text-size-adjust: large;
+}
+
+.Resistencias p
+{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    text-align: justify;
+    margin-left:25px ;
+    margin-right:15px;
+    padding: 25px 25px 25px 25px;
+    float: left; 
+    width: 60%;
+
+}
+
+.Ilustracion_1
+{
+    margin-right:25px;
+    margin-left: px;
+    margin-bottom:10px; 
+    width: 30%;
+    height: 80%;
+    float: right;
+
+}
+
+.Resistencias
+{
+    height: 200px;
+    
+}
+
+
+/*Capacitores*/
+
+.Capacitores h4
+{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+.Capacitores h4:hover, h4:active
+{
+    color:rgb(63, 224, 63);
+    text-size-adjust: large;
+}
+
+.Capacitores p
+{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    text-align: justify;
+    margin-left:25px ;
+    margin-right:15px;
+    padding: 25px 25px 25px 25px;
+    float: left; 
+    width: 60%;
+
+}
+
+.Ilustracion_3
+{
+    margin-right:25px;
+    margin-left: px;
+    margin-bottom:10px; 
+    width: 30%;
+    height: 70%;
+    float: right;
+
+}
+
+.Capacitores
+{
+    height: 300px;
+    
+}
+
+/*Potenciometro*/
+
+
+.Potenciometro h4
+{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+.Potenciometro h4:hover, h4:active
+{
+    color:rgb(63, 224, 63);
+    text-size-adjust: large;
+}
+
+.Potenciometro p
+{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    text-align: justify;
+    margin-left:25px ;
+    margin-right:15px;
+    padding: 25px 25px 25px 25px;
+    float: left; 
+    width: 60%;
+
+}
+
+.Ilustracion_2
+{
+    margin-right:25px;
+    margin-left: px;
+    margin-bottom:10px; 
+    width: 30%;
+    height: 80%;
+    float: right;
+
+}
+
+.Potenciometro
+{
+    height: 200px;
+    
+}
+
+/*Intro*/
+
+.intro
+{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    text-align: justify;
+    margin-left:25px ;
+    margin-right:15px;
+    padding: 25px 25px 25px 25px;
+}
+
+/*Unetenos*/
+
+.Union
+{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    text-align: justify;
+    margin-left:25px ;
+    margin-right:15px;
+    padding: 25px 25px 25px 25px; 
+}
