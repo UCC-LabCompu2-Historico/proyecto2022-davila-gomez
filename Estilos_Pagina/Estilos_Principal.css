@@ -181,6 +181,28 @@ ul li {
     margin-top: 25px;
 }
 
+#Boton_para_Calcular:hover, #Boton_para_Calcular:active
+{
+    background-color:rgb(104, 233, 104) ;
+}
+
+#Color_segunda_banda:hover
+{
+    background-color:rgb(104, 233, 104) ;
+}
+
+#Color_Primera_Banda:hover
+{
+    background-color:rgb(104, 233, 104) ;
+}
+
+
+#Banda_Multiplicador:hover
+{
+    background-color:rgb(104, 233, 104) ;
+}
+
+
 #Cuantas_Bandas
 {
     margin-left: 20px;
@@ -279,3 +301,5 @@ footer
     width: 45%;
     float: right;
 }
+
+
