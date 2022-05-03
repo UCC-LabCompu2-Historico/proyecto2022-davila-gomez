@@ -8,7 +8,7 @@ html
 body
 {
     background-color: rgb(80, 173, 80);
-    background-image: url("/home/fran/Escritorio/Proyecto2022-Davila-Gomez/Ilustraciones/6348.jpg");
+    background-image: url("Ilustraciones/6348.jpg");
     background-repeat: repeat;
     background-size:contain;
     background-attachment: scroll;
