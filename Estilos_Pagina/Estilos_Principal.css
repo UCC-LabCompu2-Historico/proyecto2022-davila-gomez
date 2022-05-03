@@ -7,14 +7,14 @@ html
 
 body
 {
-    background-color: rgb(80, 173, 80);
+    background-color: rgb(37, 112, 37);
     background-image: url("/home/fran/Escritorio/Proyecto2022-Davila-Gomez/Ilustraciones/6348.jpg");
     background-repeat: repeat;
     background-size:contain;
     background-attachment: scroll;
 
     font-size:larger;
-
+    flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
 }
 
@@ -34,6 +34,8 @@ h2,h3{color: white;
     height: 40px;
     padding-left: 20px;
     margin: 15px 15px 30px 15px;
+    min-width: 250px;
+    min-height: auto;
    
 }
 
@@ -90,8 +92,12 @@ ul li {
 
 .Descripcion_Historia{
     background-color: white;
-    margin: 15px 15px 30px 15px;
-    padding-bottom: 32%;
+    margin: 15px 15px 15px 15px;
+    padding-bottom: 2%;
+    min-width: 250px;
+    min-height: 250px;
+    overflow: auto;
+    
 }
 
 .Descripcion_Historia p
@@ -101,7 +107,8 @@ ul li {
     float: left;
     margin-left: 20px;
     margin-top: 15px;
-   
+     min-width: 250px;
+     min-height: 250px;
 }
 
 .Ilustracion_1
@@ -111,8 +118,8 @@ ul li {
     margin-top: 15px;
     margin-right: 15px;
     padding-left: 10px;
-
-    object-fit: contain;
+    min-width: 250px;
+  
 }
 
 /*Seccion: Que es el codigo de colores */
@@ -120,9 +127,11 @@ ul li {
 .Quescodigodecolores 
 {
     background-color: white;
-    padding-bottom: 35%;
-    margin: 15px 15px 30px 15px;
-
+    padding-bottom: 2%;
+    margin: 15px 15px 15px 15px;
+    min-height: 250px;
+    min-width: 250px;
+    overflow: auto;
 }
 
 .Quescodigodecolores p
@@ -145,7 +154,7 @@ ul li {
     float:right;
     padding-left: 10px;
     margin-right: 40px;
-    object-fit: contain;
+    
 }
 
 
@@ -157,9 +166,12 @@ ul li {
 .Calc_Resistencias
 {
     background-color: white;
-    padding-bottom: 50%;
+    
     margin: 15px 15px 30px 15px;
-
+    min-height: 250px;
+    min-width: 250px;
+    overflow: auto;
+    
 }
 
 .Calc_Resistencias p 
@@ -228,9 +240,12 @@ footer
     margin-top: 20px;
     margin-left: 5px;
     color:black;
-    padding-bottom: 35%;
+    padding-bottom: 2%;
     background-color:white;
     margin: 15px 15px 30px 15px;
+    min-height: 250px;
+    min-width: 250px;
+    overflow: auto;
 }
 
 .f-Alumnos
@@ -302,4 +317,42 @@ footer
     float: right;
 }
 
+/*Tecnica a la Esperanza*/
+
+@media (max-width:720px){
+
+    .Ilustracion_1{
+        display:none;
+    }
+
+    .Ilustracion_2
+    {
+        display: none;
+    }
+    
+    .Descripcion_Historia p
+    {
+        text-align:justify;
+        width:90%;
+        float: none;
+        margin-left: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .Quescodigodecolores p
+    {
+        text-align:justify;
+        width:90%;
+        float: none;
+        margin-left: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .Ilustracion_4
+    {
+        width: 200px;
+    }
+}
 
