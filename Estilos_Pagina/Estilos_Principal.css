@@ -1,5 +1,6 @@
 /*Fondo Principal*/
 
+
 html
 {
     scroll-behavior: smooth;
@@ -8,7 +9,7 @@ html
 body
 {
     background-color: rgb(37, 112, 37);
-    background-image: url("Ilustraciones/6348.jpg");
+    background-image: url("6348.jpg");
     background-repeat: repeat;
     background-size:contain;
     background-attachment: scroll;
