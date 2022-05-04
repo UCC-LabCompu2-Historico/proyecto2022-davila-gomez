@@ -1,8 +1,13 @@
 # proyecto2022
-Estructura de Proyecto Lab de Compu II - 2022
-Alumnos:Gomez Francisco- Rodrigo Davila
-Titulo del Proyecto: Resistencias Electricas
-https://ucc-labcompu2.github.io/proyecto2022-davila-gomez/
+* Estructura de Proyecto Lab de Compu II - 2022
+* Alumnos:Gomez Francisco- Rodrigo Davila
+* Titulo del Proyecto: Resistencias Electricas
+* Link : (https://ucc-labcompu2.github.io/proyecto2022-davila-gomez/index.html)
+
+### Arquitectura
+* Html
+* Css
+
 ## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
