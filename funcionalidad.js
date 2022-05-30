@@ -1,11 +1,12 @@
 //Para solo 3 bandas
 
 /*Voy a declarar variables globales*/
-var banda_1=null;
-var banda_2=null;
-var multiplicadora=null;
-var Resultado;
-
+var banda_1=0;
+var banda_2=0;
+var multiplicadora=0;
+var Resultado=(banda_1+banda_2)*multiplicadora;
+/*La idea de comenzar con estos valores iniciales es que el usuario no sufra del 
+bugg que cuando no selecciona ninguna banda le de undifined */
 
 
 function ingreso_Banda_1(id, value)
@@ -207,4 +208,16 @@ function calcular()
     return Resultado;
     
     
+}
+
+function ElCanvasfuncion(){
+    //varieble para el canvas
+
+    var canva=document.getElementById("a123456");
+    var ctx=canva.getContext("2d");
+
+    ctx.font=" 30px w95fa";
+    ctx.fillText("Resultado");
+    
+
 }
