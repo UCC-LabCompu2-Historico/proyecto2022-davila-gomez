@@ -8,13 +8,14 @@
     <link rel="shortcut icon" href="Ilustraciones/Simbolo_Resist.jpg" type="image/x-icon">
     <link rel="stylesheet" href="Estilos_Pagina/Estilos_Principal.css" type="text/css">
     <link rel="stylesheet" href="Ilustraciones/6348.jpg">
+    <script type="text/javascript" src="funcionalidad.js"></script>
 </head>
 
 
 <!--Body de la pagina-->
 
 
-<body>
+<body onload="alert('!Bienvenido!')">
 <header>
     
     <h1>RESISTENCIAS ELECTRICAS</h1>
@@ -93,12 +94,12 @@
 <input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas
 
 
-
    <label for="Color Primera_Banda"> <p>Eliga Color de Primera banda</p> </label>
-    <select name="Colores de Banda" id="Color_Primera_Banda">
+    <select name="Colores de Banda" id="Color_Primera_Banda" onchange="ingreso_Banda_1(this.id,this.value);">
         <option value="Negro">Negro</option>
         <option value="Marron">Marron</option>
         <option value="Rojo">Rojo</option>
+        <option value="Naranja" >Naranja</option>
         <option value="Amarillo">Amarillo</option>
         <option value="Verde">Verde</option>
         <option value="Azul">Azul</option>
@@ -109,10 +110,11 @@
 
 
     <label for="Color segunda_banda"></label><p>Eliga Color de Segunda banda</p></label>
-    <select name="Colores de Banda" id="Color_segunda_banda">
+    <select name="Colores de Banda" id="Color_segunda_banda" onchange="ingreso_Banda_2(this.id,this.value);">
         <option value="Negro" >Negro</option>
         <option value="Marron">Marron</option>
         <option value="Rojo">Rojo</option>
+        <option value="Naranja" >Naranja</option>
         <option value="Amarillo">Amarillo</option>
         <option value="Verde">Verde</option>
         <option value="Azul">Azul</option>
@@ -124,10 +126,11 @@
 
     <label for="Banda Multiplicador"><p>Eliga Color banda Multiplicador</p></label>
 
-    <select name="Colores de Banda" id="Banda_Multiplicador">
+    <select name="Colores de Banda" id="Banda_Multiplicador" onchange="ingreso_Banda_multiplicadora(this.id,this.value);">
         <option value="Negro" >Negro</option>
         <option value="Marron">Marron</option>
         <option value="Rojo" >Rojo</option>
+        <option value="Naranja" >Naranja</option>
         <option value="Amarillo" >Amarillo</option>
         <option value="Verde" >Verde</option>
         <option value="Azul">Azul</option>
@@ -143,7 +146,14 @@
 
 
 <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
-<button type="button" id="Boton_para_Calcular">Calcular</button>
+<button type="button" id="Boton_para_Calcular" onclick="calcular();">Calcular</button>
+<input size="1" style="font-size:28px" type="text" id="resultado_calc" >
+<p>El resultado es:     <span id="mi_resultado"></span> <span id="mi_resultado_2"></span>Ω</p>
+
+
+<br>
+
+<canvas id="ElCanvas" width="600px" height="50px" style="border: 2px solid #248a29;" onchange="canvas_3bandas(this.id)">Su navegador no soporta la animacion.</canvas>
 
 
 

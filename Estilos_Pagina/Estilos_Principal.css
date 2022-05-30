@@ -6,6 +6,11 @@ html
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: w95fa;
+    src: url(w95fa.woff);
+}
+
 body
 {
     background-color: rgb(37, 112, 37);
@@ -14,26 +19,32 @@ body
     background-size:contain;
     background-attachment: scroll;
 
+    font-family: w95fa;
     font-size:larger;
     flex-wrap: wrap;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    
 }
 
 
 
 h1{color: white; 
     background-color: rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-left: 25%;
+    font-family: w95fa;
+    font: size 50px;
+    padding-left: 32%;
+    padding-top: 15px;
+    padding-bottom: 10px;
      
 }
 
 h2,h3{color: white; 
     background-color: rgb(240, 125, 42); 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: w95fa;
+    
     width: 100%;
     height: 40px;
     padding-left: 20px;
+    padding-top: 10px;
     margin: 15px 15px 30px 15px;
     min-width: 250px;
     min-height: auto;
@@ -42,10 +53,11 @@ h2,h3{color: white;
 
 h4{
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: w95fa;
+    font-size: xx-large;
     padding-left: 20px;
    padding-top: 20px;
-   padding-bottom: 5px;
+   margin-bottom: 0px;
    text-align: center;
 }
 
@@ -72,8 +84,8 @@ ul li {
 
 .indice ul
 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
+    font-family: w95fa;
+    font-size: x-large;
     text-align: center;
 }
 
@@ -184,8 +196,15 @@ ul li {
     margin-top: 30px;
 }
 
+#elCanvas
+{
+    float: left;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 32px;
+}
 
-#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Barra_de_Tolerancia
+#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Barra_de_Tolerancia,#resultado_calc
 {
    
     width: 50%;
