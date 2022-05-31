@@ -15,7 +15,7 @@
 <!--Body de la pagina-->
 
 
-<body onload="alert('!Bienvenido!')">
+<body onload="dibujarImagen()" >
 <header>
     
     <h1>RESISTENCIAS ELECTRICAS</h1>
@@ -93,50 +93,53 @@
 <input type="checkbox" name="Bandas_2" id="Cuantas_Bandas" value="4 Bandas">4 Bandas
 <input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas
 
+<canvas id="myCanvas" class="ejer" width="450px" height="450px">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
 
    <label for="Color Primera_Banda"> <p>Eliga Color de Primera banda</p> </label>
     <select name="Colores de Banda" id="Color_Primera_Banda" onchange="ingreso_Banda_1(this.id,this.value);">
-        <option value="Negro">Negro</option>
-        <option value="Marron">Marron</option>
-        <option value="Rojo">Rojo</option>
-        <option value="Naranja" >Naranja</option>
-        <option value="Amarillo">Amarillo</option>
-        <option value="Verde">Verde</option>
-        <option value="Azul">Azul</option>
-        <option value="Violeta">Violeta</option>
-        <option value="Gris">Gris</option>
-        <option value="Blanco">Blanco</option>
+        <option value="Negro" onclick="Negro()">Negro</option>
+        <option value="Marron" onclick="Marron()">Marron</option>
+        <option value="Rojo" onclick="Rojo()">Rojo</option>
+        <option value="Naranja" onclick="Naranja()">Naranja</option>
+        <option value="Amarillo" onclick="Amarillo()" >Amarillo</option>
+        <option value="Verde" onclick="Verde()">Verde</option>
+        <option value="Azul" onclick="Azul()">Azul</option>
+        <option value="Violeta" onclick="Violeta()">Violeta</option>
+        <option value="Gris" onclick="Gris()">Gris</option>
+        <option value="Blanco" onclick="Blanco()">Blanco</option>
     </select>
 
 
     <label for="Color segunda_banda"></label><p>Eliga Color de Segunda banda</p></label>
     <select name="Colores de Banda" id="Color_segunda_banda" onchange="ingreso_Banda_2(this.id,this.value);">
-        <option value="Negro" >Negro</option>
-        <option value="Marron">Marron</option>
-        <option value="Rojo">Rojo</option>
-        <option value="Naranja" >Naranja</option>
-        <option value="Amarillo">Amarillo</option>
-        <option value="Verde">Verde</option>
-        <option value="Azul">Azul</option>
-        <option value="Violeta">Violeta</option>
-        <option value="Gris">Gris</option>
-        <option value="Blanco">Blanco</option>
+        <option value="Negro" onclick="Negro1()">Negro</option>
+        <option value="Marron" onclick="Marron1()">Marron</option>
+        <option value="Rojo" onclick="Rojo1()">Rojo</option>
+        <option value="Naranja" onclick="Naranja1()">Naranja</option>
+        <option value="Amarillo" onclick="Amarillo1()" >Amarillo</option>
+        <option value="Verde" onclick="Verde1()">Verde</option>
+        <option value="Azul" onclick="Azul1()">Azul</option>
+        <option value="Violeta" onclick="Violeta1()">Violeta</option>
+        <option value="Gris" onclick="Gris1()">Gris</option>
+        <option value="Blanco" onclick="Blanco1()">Blanco</option>
     </select>
 
 
     <label for="Banda Multiplicador"><p>Eliga Color banda Multiplicador</p></label>
 
     <select name="Colores de Banda" id="Banda_Multiplicador" onchange="ingreso_Banda_multiplicadora(this.id,this.value);">
-        <option value="Negro" >Negro</option>
-        <option value="Marron">Marron</option>
-        <option value="Rojo" >Rojo</option>
-        <option value="Naranja" >Naranja</option>
-        <option value="Amarillo" >Amarillo</option>
-        <option value="Verde" >Verde</option>
-        <option value="Azul">Azul</option>
-        <option value="Violeta">Violeta</option>
-        <option value="Gris">Gris</option>
-        <option value="Blanco">Blanco</option>
+        <option value="Negro" onclick="Negro2()">Negro</option>
+        <option value="Marron" onclick="Marron2()">Marron</option>
+        <option value="Rojo" onclick="Rojo2()">Rojo</option>
+        <option value="Naranja" onclick="Naranja2()">Naranja</option>
+        <option value="Amarillo" onclick="Amarillo2()" >Amarillo</option>
+        <option value="Verde" onclick="Verde2()">Verde</option>
+        <option value="Azul" onclick="Azul2()">Azul</option>
+        <option value="Violeta" onclick="Violeta2()">Violeta</option>
+        <option value="Gris" onclick="Gris2()">Gris</option>
+        <option value="Blanco" onclick="Blanco2()">Blanco</option>
     </select>
 
 
@@ -146,14 +149,10 @@
 
 
 <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
-<button type="button" id="Boton_para_Calcular" onclick="calcular();" onclick="ElCanvasfuncion()">Calcular</button>
-<input size="1" style="font-size:28px" type="text" id="resultado_calc" >
-<p>El resultado es:     <span id="mi_resultado"></span> <span id="mi_resultado_2"></span>Ω</p>
-
-
+<button type="button" id="Boton_para_Calcular" onclick="calcular();">Calcular</button>
 <br>
+<h5>El resultado es:     <span id="mi_resultado"></span> <span id="mi_resultado_2"></span>Ω</h5>
 
-<canvas id="a123456" width="600px" height="50px" style="border: 2px solid #248a29;" onchange="canvas_3bandas(this.id)">Su navegador no soporta la animacion.</canvas>
 
 
 

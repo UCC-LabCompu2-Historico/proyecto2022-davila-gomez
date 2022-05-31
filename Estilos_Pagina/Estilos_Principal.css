@@ -205,13 +205,33 @@ ul li {
     margin-right: 32px;
 }
 
+/*El Canvas 2*/
+#myCanvas{
+    float:right;
+    margin-top: 20px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
 #Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Barra_de_Tolerancia,#resultado_calc
 {
    
-    width: 50%;
+    width: 45%;
     float: left;
     margin-left: 20px;
     margin-top: 25px;
+}
+
+h5
+{
+    font-family: w95fa;
+    font-size: 50px;
+    color: rgb(240, 125, 42);
+    float: right;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-right: 15%;
+
 }
 
 #Boton_para_Calcular:hover, #Boton_para_Calcular:active

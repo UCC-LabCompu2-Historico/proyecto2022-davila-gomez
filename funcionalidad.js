@@ -1,3 +1,233 @@
+//SECTOR CANVAS
+//Canvas Rodri uso botones pero como usamos el select fran se le
+// ocurrio usar el one click dentro de los option del select
+function  dibujarImagen(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = new Image();
+    img.src = "Ilustraciones/resis.jpeg";
+    img.onload = function (){
+        ctx.drawImage(img,0,0)
+    }
+}
+function Negro(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#0e0d0d";
+    ctx.fillRect(152,132,13,74);
+}
+function Rojo(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#da0000";
+    ctx.fillRect(152,132,13,74);
+}
+function Amarillo(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffde0e";
+    ctx.fillRect(152,132,13,74);
+}
+function Marron(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#a44802";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Naranja(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #fc7009";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Verde(){
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle="#0dfc09";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Azul(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #092efc";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Violeta(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#af09fc";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Gris(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #837f85";
+    ctx.fillRect(152,132,13,74);
+}
+
+function Blanco(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #ffffff";
+    ctx.fillRect(152,132,13,74);
+}
+
+
+
+
+//Segunda Banda
+
+
+function Negro1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#0e0d0d";
+    ctx.fillRect(203, 137, 13, 62);
+}
+function Rojo1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#da0000";
+    ctx.fillRect(203, 137, 13, 62);
+}
+function Amarillo1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffde0e";
+    ctx.fillRect(203, 137, 13, 62);
+}
+function Marron1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#a44802";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Naranja1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #fc7009";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Verde1(){
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle="#0dfc09";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Azul1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #092efc";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Violeta1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#af09fc";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Gris1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #837f85";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+function Blanco1(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #ffffff";
+    ctx.fillRect(203, 137, 13, 62);
+}
+
+
+//3raBanda
+
+function Negro2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#0e0d0d";
+    ctx.fillRect(234, 137, 13, 62);
+}
+function Rojo2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#da0000";
+    ctx.fillRect(234, 137, 13, 62);
+}
+function Amarillo2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffde0e";
+    ctx.fillRect(234, 137, 13, 62);
+}
+function Marron2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#a44802";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Naranja2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #fc7009";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Verde2(){
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle="#0dfc09";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Azul2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #092efc";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Violeta2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#af09fc";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Gris2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #837f85";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+function Blanco2(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = " #ffffff";
+    ctx.fillRect(234, 137, 13, 62);
+}
+
+
+
+
+
+//SECTOR CALCULADORA
 //Para solo 3 bandas
 
 /*Voy a declarar variables globales*/
@@ -208,16 +438,4 @@ function calcular()
     return Resultado;
     
     
-}
-
-function ElCanvasfuncion(){
-    //varieble para el canvas
-
-    var canva=document.getElementById("a123456");
-    var ctx=canva.getContext("2d");
-
-    ctx.font=" 30px w95fa";
-    ctx.fillText("Resultado");
-    
-
 }
