@@ -44,8 +44,8 @@
 
 <div class="Descripcion_Historia">
 <p>
-    Se le denomina <b>resistencia eléctrica</b> a la oposición al flujo de corriente eléctrica a través de un conductor.
-    ​ La unidad de resistencia en el Sistema Internacional es el ohmio y se representa con la letra griega Omega Ω, en honor al físico alemán <i>Georg Simon Ohm</i>, quien descubrió el principio que ahora lleva su nombre. En la actualidad este componente se encuentra en casi todos los dispositivos electronicos.
+    Se le denomina <b>Resistencia Eléctrica</b> a la oposición al flujo de corriente eléctrica a través de un conductor.
+    ​ La unidad de resistencia en el Sistema Internacional es el ohmio y se representa con la letra griega Omega Ω, en honor al físico alemán <i>Georg Simon Ohm</i>, quien descubrió el Principio que ahora lleva su nombre. En la actualidad este componente se encuentra en casi todos los dispositivos electronicos.
 </p>
 
    
@@ -67,7 +67,7 @@
 
 
 <p>
-    Podemos encontrar muchos diferentes tipos de resistencias disponibles. A lo largo de la siguiente pagina nos enforcaremos en las <b>Resistencias Fijas</b> para identificar o calcular el valor de una resistencia es importante tener un sistema de marcado o utilizando un aparato de medición como lo es el óhmetro. El <b>código de color de la resistencia</b> es una forma de representar el valor en conjunto con la tolerancia.
+    Podemos encontrar muchos diferentes tipos de resistencias disponibles. A lo largo de la siguiente pagina nos enfocaremos en las <b>Resistencias Fijas</b>. Para identificar o calcular el valor de una resistencia es importante tener un sistema de marcado o utilizando un aparato de medición como lo es el óhmetro. El <b>código de color de la resistencia</b> es una forma de representar el valor de la resistencia en conjunto con la tolerancia.
     Los estándares para los registros de codificación de colores se definen en las normas <i> IEC 60062</i>, este estándar describe la codificación de colores para resistencias con extremos axiales y el código numérico para resistencias SMD.<br>
 
     <u>Existen varias bandas para especificar el valor de la resistencia. Incluso se especifican la tolerancia, confiabilidad y tasa de falla. La cantidad de bandas varía de tres a seis.
@@ -86,18 +86,16 @@
 <!--Calculadora de Resistencias:-->
 
 <div class="Calc_Resistencias">
+<div class="Acomodar_mediante_Grilla">
+<div class="grilla1">
 
-<label for="Cuantas_Bandas"><p>Eliga el numero de bandas</p></label>
-
+<!--<label for="Cuantas_Bandas"><p>Eliga el numero de bandas</p></label>
 <input type="checkbox" name="Bandas_1" id="Cuantas_Bandas" value="3 Bandas">3 Bandas
 <input type="checkbox" name="Bandas_2" id="Cuantas_Bandas" value="4 Bandas">4 Bandas
-<input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas
+<input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas-->
 
-<canvas id="myCanvas" class="ejer" width="450px" height="450px">
-    Tu navegador no soporta el tag de HTML5 canvas.
-</canvas>
 
-   <label for="Color Primera_Banda"> <p>Eliga Color de Primera banda</p> </label>
+   <label for="Color Primera_Banda"> <p>Elija Color de Primera banda</p> </label>
     <select name="Colores de Banda" id="Color_Primera_Banda" onchange="ingreso_Banda_1(this.id,this.value);">
         <option value="Negro" onclick="Negro()">Negro</option>
         <option value="Marron" onclick="Marron()">Marron</option>
@@ -112,7 +110,7 @@
     </select>
 
 
-    <label for="Color segunda_banda"></label><p>Eliga Color de Segunda banda</p></label>
+    <label for="Color segunda_banda"></label><p>Elija Color de Segunda banda</p></label>
     <select name="Colores de Banda" id="Color_segunda_banda" onchange="ingreso_Banda_2(this.id,this.value);">
         <option value="Negro" onclick="Negro1()">Negro</option>
         <option value="Marron" onclick="Marron1()">Marron</option>
@@ -127,7 +125,7 @@
     </select>
 
 
-    <label for="Banda Multiplicador"><p>Eliga Color banda Multiplicador</p></label>
+    <label for="Banda Multiplicador"><p>Elija Color banda Multiplicador</p></label>
 
     <select name="Colores de Banda" id="Banda_Multiplicador" onchange="ingreso_Banda_multiplicadora(this.id,this.value);">
         <option value="Negro" onclick="Negro2()">Negro</option>
@@ -144,18 +142,31 @@
 
 
 
-<Label for="Barra de Toleracia"><p>ELiga Tolerancia - Rango de potencia</p></Label>
-<input type="range" id="Barra_de_Tolerancia" name="Rango" value="50" min="0" max="129">
+<Label for="Barra de Toleracia"><p>Elija Tolerancia - Rango de potencia</p></Label>
+<select name="Colores de Toleracia" id="Banda_tolerancia" onchange="ingreso_Banda_tolerancia(this.id,this.value);">
+    <option value="Marron" onclick="Marron3()">Marron</option>
+    <option value="Rojo" onclick="Rojo3()">Rojo</option>
+    <option value="Dorado" onclick="Dorado()">Dorado</option>
+    <option value="Plateado" onclick="Plateado()">Plateado</option>
+
+</select>
 
 
 <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
-<button type="button" id="Boton_para_Calcular" onclick="calcular();">Calcular</button>
-<br>
-<h5>El resultado es:     <span id="mi_resultado"></span> <span id="mi_resultado_2"></span>Ω</h5>
 
+<button type="button" id="Boton_para_Calcular" onclick="calcular(); Calculo_tolerancia();" >Calcular</button>
+</div>
+<div class="Grilla2">
+<canvas id="myCanvas" class="ejer" width="450px" height="450px">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
 
+<h5>El resultado es:     <span id="mi_resultado"></span>Ω</h5>
+<h5><span id="mi_resultado_toleracia"></span></h5>
 
+</div>
 
+</div>
 
 </div>
 
@@ -191,7 +202,7 @@
 <p>Telefono:</p>
     <a href="tel:+7649459398">76483738393</a>
 <br>
-<h4>Counidad:</h4>
+<h4>Comunidad:</h4>
     <a href="Comunidad.html">Descubre otros Componentes</a>
 </div>
 
@@ -200,7 +211,7 @@
 <br>
 <b>Daniel Germena</b>
 <br>
-<h4>Univercidad</h4>
+<h4>Universidad</h4>
 
 <a href="https://ucc.edu.ar/"><img class="Ilustracion_4" src="Ilustraciones/Captura de pantalla de 2022-05-02 19-32-17.png" alt="Logo de la univercidad Catolica de Cordoba"></a>
 </div>

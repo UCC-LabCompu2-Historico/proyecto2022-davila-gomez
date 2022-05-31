@@ -213,7 +213,7 @@ ul li {
     margin-right: 32px;
 }
 
-#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Barra_de_Tolerancia,#resultado_calc
+#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Banda_tolerancia,#resultado_calc
 {
    
     width: 45%;
@@ -222,6 +222,10 @@ ul li {
     margin-top: 25px;
 }
 
+#Boton_para_Calcular
+{
+    margin-bottom: 30px;
+}
 h5
 {
     font-family: w95fa;
@@ -271,6 +275,20 @@ h5
 }
 
 
+.Acomodar_mediante_Grilla
+{
+    display: grid;
+    grid-template-areas: "grilla1 Grilla2";
+}
+
+.grilla1 {
+    grid-area: grilla1;
+
+}
+
+.Grilla2{
+    grid-area: Grilla2;
+}
 
 
 /*Footer*/
@@ -360,7 +378,7 @@ footer
 
 /*Tecnica a la Esperanza*/
 
-@media (max-width:720px){
+@media (max-width:850px){
 
     .Ilustracion_1{
         display:none;
@@ -395,5 +413,21 @@ footer
     {
         width: 200px;
     }
+
+    .Acomodar_mediante_Grilla
+{
+    display: grid;
+    grid-template-areas: "grilla1" "Grilla2";
+}
+
+.grilla1 {
+    grid-area: grilla1;
+
+}
+
+.Grilla2{
+    grid-area: Grilla2;
+}
+
 }
 

@@ -225,6 +225,32 @@ function Blanco2(){
 
 
 
+//Banda Multiplicadora
+
+function Dorado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffde0e";
+    ctx.fillRect(284,132,13,74);
+}
+function Rojo3(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#da0000";
+    ctx.fillRect(284,132,13,74);
+}
+function Plateado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#837f85";
+    ctx.fillRect(284,132,13,74);
+}
+function Marron3(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#a44802";
+    ctx.fillRect(284,132,13,74);
+}
 
 
 //SECTOR CALCULADORA
@@ -235,6 +261,7 @@ var banda_1=0;
 var banda_2=0;
 var multiplicadora=0;
 var Resultado=(banda_1+banda_2)*multiplicadora;
+var Tolerancia;
 /*La idea de comenzar con estos valores iniciales es que el usuario no sufra del 
 bugg que cuando no selecciona ninguna banda le de undifined */
 
@@ -438,4 +465,37 @@ function calcular()
     return Resultado;
     
     
+}
+
+
+function ingreso_Banda_tolerancia(id, value)
+{
+    Tolerancia= document.getElementById('Banda_tolerancia').value;
+
+    return Tolerancia;
+}
+
+function Calculo_tolerancia()
+{
+    switch(Tolerancia)
+    {
+        case "Marron":
+            document.getElementById('mi_resultado_toleracia').innerHTML="Tolerancia ±1%";   
+        break;
+
+        case "Rojo":
+            document.getElementById('mi_resultado_toleracia').innerHTML="Tolerancia ±2%";
+            break;
+    
+        case "Dorado":
+            document.getElementById('mi_resultado_toleracia').innerHTML="Tolerancia ±5%";
+            break;
+        
+        case "Plateado":
+            document.getElementById('mi_resultado_toleracia').innerHTML="Tolerancia ±10%";
+            break;
+ 
+        default:
+        break;
+    }
 }
