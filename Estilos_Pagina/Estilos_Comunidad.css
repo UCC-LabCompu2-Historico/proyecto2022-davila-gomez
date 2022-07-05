@@ -5,6 +5,12 @@ html
     scroll-behavior: smooth;
 }
 
+
+@font-face {
+    font-family: w95fa;
+    src: url(w95fa.woff);
+}
+
 body
 {
     background-color: rgb(80, 173, 80);
@@ -12,37 +18,32 @@ body
     background-repeat: repeat;
     background-size:contain;
     background-attachment: scroll;
-
+    border-radius: 10px 20px;
     font-size:larger;
+    font-family: w95fa;
 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
 }
 
 
-
 h1{color: white; 
-    background-color: rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-left: 17%;
+   background-color:  rgb(240, 125, 42);
+    font-size: 40px;
+    padding-left: 27%;
      
 }
 
 h2,h3{color: white; 
-    background-color: rgb(240, 125, 42); 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    width: 100%;
-    height: 40px;
-    padding-left: 20px;
-    margin: 15px 15px 30px 10px;
+    
+    background-color:  rgb(240, 125, 42);;
+    font-size: x-large;
+    padding: 5px 5px 5px 5px;
+    margin: 15px 15px 15px 15px;
    
 }
 
 h4{
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-left: 20px;
-   padding-top: 20px;
-   padding-bottom: 5px;
+    font-size: 26px;
    text-align: center;
 }
 
@@ -56,20 +57,23 @@ ul li {
     padding-left:30px;
     padding-right:30px;
     
+    
 }
 
 .indice
 {
 
+    
     background-color: white;
-    margin: 15px 15px 30px 15px;
+    margin: 15px 15px 15px 15px;
+    padding: 1px 3px 3px 3px;
 
 }
 
 .indice ul
 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
+
+    font-size: 26px;
     text-align: center;
 }
 
@@ -89,35 +93,34 @@ ul li {
 
 footer
 {
-    
-    margin-top: 20px;
-    margin-left: 5px;
+    font-family: w95fa; 
     color:black;
-    padding-bottom: 35%;
     background-color:white;
     margin: 15px 15px 30px 15px;
+    display: grid;
+    grid-template-areas: "f-alumnos f-Institucion";
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px 20px;
 }
 
 .f-Alumnos
 {
-    width: 50%;
-    float: left;
-
+ 
+    grid-area: f-alumnos;
 
 }
 
 .f-Alumnos p
 {
     
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+   
     margin-left:15px;
 
 }
 
 .f-Alumnos a
 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: none;
+
     margin-left:15px;
 }
 
@@ -136,7 +139,6 @@ footer
 .f-Alumnos h4
 {
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
     margin-left:10px;
     margin-top: 0px;
@@ -153,7 +155,7 @@ footer
 .f-Institucion h4
 {
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    grid-area: f-Institucion;
     text-align: left;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -163,8 +165,7 @@ footer
 
 .f-Institucion
 {
-    width: 45%;
-    float: right;
+    grid-area: f-Institucion;
 }
 
 
@@ -173,7 +174,15 @@ footer
 
 .Temas
 {
-    background-color:rgb(240, 125, 42);
+ 
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px 20px;
+    background: linear-gradient(90deg,#000000,#10d402 );
+   
+    display: grid;
+    grid-template-areas: "Resistencia ilus_1"
+                         "Potenciometro ilus_2"
+                         "Capacitores ilus_3"  ;
     
 
 }
@@ -198,30 +207,32 @@ footer
     background-color: white;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
     text-align: justify;
     margin-left:25px ;
     margin-right:15px;
     padding: 25px 25px 25px 25px;
-    float: left; 
-    width: 60%;
+   
 
 }
 
 .Ilustracion_1
 {
-    margin-right:25px;
-    margin-left: px;
-    margin-bottom:10px; 
-    width: 30%;
-    height: 80%;
-    float: right;
+    margin: 15px 15px 15px 15px;  
+   max-width: 250px;
+   max-height: 250px;
 
 }
 
 .Resistencias
 {
-    height: 200px;
+    grid-area:Resistencia ;
+    
+}
+
+.ilus_1
+{
+    margin-top: 30px;
+    grid-area: ilus_1;
     
 }
 
@@ -248,33 +259,33 @@ footer
     background-color: white;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+
     text-align: justify;
     margin-left:25px ;
     margin-right:15px;
     padding: 25px 25px 25px 25px;
-    float: left; 
-    width: 60%;
+  
 
 }
 
 .Ilustracion_3
 {
-    margin-right:25px;
-    margin-left: px;
-    margin-bottom:10px; 
-    width: 30%;
-    height: 70%;
-    float: right;
+    margin: 15px 15px 15px 15px;  
+    max-width: 250px;
+    max-height: 250px;
 
 }
 
 .Capacitores
 {
-    height: 300px;
+    grid-area: Capacitores;
     
 }
 
+.ilus_3{
+    grid-area: ilus_3;
+    margin-top: 30px;
+}
 /*Potenciometro*/
 
 
@@ -298,31 +309,30 @@ footer
     background-color: white;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
     text-align: justify;
     margin-left:25px ;
     margin-right:15px;
     padding: 25px 25px 25px 25px;
-    float: left; 
-    width: 60%;
+   
 
 }
 
 .Ilustracion_2
 {
-    margin-right:25px;
-    margin-left: px;
-    margin-bottom:10px; 
-    width: 30%;
-    height: 80%;
-    float: right;
+    margin: 15px 15px 15px 15px; 
+    max-width: 250px;
+    max-height: 250px;
 
 }
 
 .Potenciometro
 {
-    height: 200px;
+    grid-area: Potenciometro;
     
+}
+
+.ilus_2{
+    grid-area: ilus_2;
 }
 
 /*Intro*/
@@ -332,7 +342,7 @@ footer
     background-color: white;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    
     text-align: justify;
     margin-left:25px ;
     margin-right:15px;
@@ -346,9 +356,36 @@ footer
     background-color: white;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    
     text-align: justify;
     margin-left:25px ;
     margin-right:15px;
     padding: 25px 25px 25px 25px; 
+}
+
+@media (max-width:550px){
+    .Temas
+    {
+     
+        display: grid;
+        grid-template-areas: "Resistencia" 
+                            "ilus_1"
+                             "Potenciometro" 
+                             "ilus_2"
+                             "Capacitores" 
+                             "ilus_3"  ;
+        
+    
+    }
+
+    footer
+{
+ 
+    display: grid;
+    grid-template-areas: "f-alumnos" 
+                         "f-Institucion";
+   
+}
+    
+
 }

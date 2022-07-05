@@ -253,22 +253,49 @@ function Marron3(){
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 //SECTOR CALCULADORA
-//Para solo 3 bandas
 
 /*Voy a declarar variables globales*/
 var banda_1=0;
 var banda_2=0;
-var multiplicadora=0;
+var banda_1_5=0;
+var banda_2_5=0;
+var banda_1_6=0;
+var banda_2_6=0;
+var banda_3=0;
+var banda_3_6=0;
+var multiplicadora=1;
+var multiplicadora_5=1;
+var multiplicadora_6=1;
 var Resultado=(banda_1+banda_2)*multiplicadora;
+var Resultado_5=(banda_1_5+banda_2_5+banda_3)*multiplicadora_5;
+var Resultado_6=(banda_1_6+banda_2_6+banda_3_6)*multiplicadora_6;
 var Tolerancia;
+var Tolerancia_5;
+var Tolerancia_6;
+
 /*La idea de comenzar con estos valores iniciales es que el usuario no sufra del 
-bugg que cuando no selecciona ninguna banda le de undifined */
+bugg que cuando no selecciona ninguna banda le de undifined.Ademas notese que ya aqui 
+tuve que declar para 4,5 y 6 bandas esto se debe a un bug que mezcla las bandas
+si se eliguen todas juntas */
 
 
 function ingreso_Banda_1(id, value)
 {
     banda_1= document.getElementById('Color_Primera_Banda').value;
+
 
     return banda_1;
 }
@@ -282,6 +309,33 @@ function ingreso_Banda_2(id, value)
     return banda_2;
 }
 
+
+function ingreso_Banda_1_5(id, value)
+{
+    banda_1_5= document.getElementById('Color_Primera_Banda_5').value;
+
+
+    return banda_1_5;
+}
+
+
+
+function ingreso_Banda_2_5(id, value)
+{
+    banda_2_5= document.getElementById('Color_segunda_banda_5').value;
+
+    return banda_2_5;
+}
+
+
+
+function ingreso_Banda_3(id, value)
+{
+    banda_3= document.getElementById('Color_Tercera_banda').value;
+
+    return banda_3;
+}
+
 function ingreso_Banda_multiplicadora(id, value)
 {
     multiplicadora= document.getElementById('Banda_Multiplicador').value;
@@ -289,7 +343,67 @@ function ingreso_Banda_multiplicadora(id, value)
     return multiplicadora;
 }
 
+function ingreso_Banda_multiplicadora_5(id, value)
+{
+    multiplicadora_5= document.getElementById('Banda_Multiplicador_5').value;
 
+    return multiplicadora_5;
+}
+
+
+function ingreso_Banda_1_6(id, value)
+{
+    banda_1_6= document.getElementById('Color_Primera_Banda_6').value;
+
+
+    return banda_1_6;
+}
+
+
+
+function ingreso_Banda_2_6(id, value)
+{
+    banda_2_6= document.getElementById('Color_segunda_banda_6').value;
+
+    return banda_2_6;
+}
+
+
+
+function ingreso_Banda_3_6(id, value)
+{
+    banda_3_6= document.getElementById('Color_Tercera_banda_6').value;
+
+    return banda_3_6;
+}
+
+function ingreso_Banda_multiplicadora_6(id, value)
+{
+    multiplicadora_6= document.getElementById('Banda_Multiplicador_6').value;
+
+    return multiplicadora_6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Funcion para el calculo de 4 bandas*/
 
 /**
      * Descripción de que hace la función
@@ -453,10 +567,11 @@ function calcular()
             break;
         
         default:
-            //Aqui que le mandara al usuario un aviso de que falta banda 1
+            Resultado=Resultado;
         break; 
 
     }
+    
     
     Resultado=parseInt(Resultado); //Comvierto en un entero mi Resultado
 
@@ -499,3 +614,627 @@ function Calculo_tolerancia()
         break;
     }
 }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Para 5 Bandas
+/*Se decidio Abrir este apartado de 5 bandas para no generar un
+ bug que se generaba al recalcular las bandas con las mismas 
+ variables del version original para 4 bandas*/
+
+function calcular_5()
+{
+
+
+
+    //Empezamos con los switch
+
+    switch(banda_1_5)
+    {
+        case "Negro":
+            Resultado_5="0";
+            break;
+
+        case "Marron":
+            Resultado_5="1";
+            break;
+
+        case "Rojo":
+            Resultado_5="2";
+            break;
+        
+        case "Naranja":
+            Resultado_5="3";
+            break;
+
+        case "Amarillo":
+            Resultado_5="4";
+            break;
+
+        case "Verde":
+            Resultado_5="5";
+            break;
+
+        case "Azul":
+            Resultado_5="6";
+            break;
+
+        case "Violeta":
+            Resultado_5="7";
+            break;
+
+        case "Gris":
+            Resultado_5="8";
+            break;
+
+        case "Blanco":
+            Resultado_5="9";
+            break;
+        
+        default:
+            //Aqui que le mandara al usuario un aviso de que falta banda 1
+        break;
+
+    }
+
+    //Banda 2
+ 
+
+    switch(banda_2_5)
+    {
+        case "Negro":
+            Resultado_5=Resultado_5+"0";
+            break;
+    
+        case "Marron":
+            Resultado_5=Resultado_5+"1";
+            break;
+    
+        case "Rojo":
+            Resultado_5=Resultado_5+"2";
+            break;
+        
+        case "Naranja":
+            Resultado_5=Resultado_5+"3";
+            break;
+    
+        case "Amarillo":
+            Resultado_5=Resultado_5+"4";
+            break;
+    
+        case "Verde":
+            Resultado_5=Resultado_5+"5";
+            break;
+    
+        case "Azul":
+            Resultado_5=Resultado_5+"6";
+            break;
+    
+        case "Violeta":
+            Resultado_5=Resultado_5+"7";
+            break;
+    
+        case "Gris":
+            Resultado_5=Resultado_5+"8";
+            break;
+    
+        case "Blanco":
+            Resultado_5=Resultado_5+"9";
+            break;
+        
+        default:
+            //Aqui que le mandara al usuario un aviso de que falta banda 1
+        break; 
+    
+    }
+
+   //Banda 3
+   
+    switch(banda_3)
+    {
+        case "Negro":
+            Resultado_5=Resultado_5+"0";
+            break;
+    
+        case "Marron":
+            Resultado_5=Resultado_5+"1";
+            break;
+    
+        case "Rojo":
+            Resultado_5=Resultado_5+"2";
+            break;
+        
+        case "Naranja":
+            Resultado_5=Resultado_5+"3";
+            break;
+    
+        case "Amarillo":
+            Resultado_5=Resultado_5+"4";
+            break;
+    
+        case "Verde":
+            Resultado_5=Resultado_5+"5";
+            break;
+    
+        case "Azul":
+            Resultado_5=Resultado_5+"6";
+            break;
+    
+        case "Violeta":
+            Resultado_5=Resultado_5+"7";
+            break;
+    
+        case "Gris":
+            Resultado_5=Resultado_5+"8";
+            break;
+    
+        case "Blanco":
+            Resultado_5=Resultado_5+"9";
+            break;
+        
+        default:
+            
+        break; 
+    
+    }
+
+//Banda Multiplicadora
+
+
+
+    switch(multiplicadora_5)
+    {
+        case "Negro":
+            Resultado_5=Resultado_5;
+        break;
+
+        case "Marron":
+            Resultado_5=Resultado_5*10;
+            break;
+    
+        case "Rojo":
+            Resultado_5=Resultado_5*100;
+            break;
+        
+        case "Naranja":
+            Resultado_5=Resultado_5*1000;
+            break;
+    
+        case "Amarillo":
+            Resultado_5=Resultado_5*10000;
+            break;
+    
+        case "Verde":
+            Resultado_5=Resultado_5*100000;
+            break;
+    
+        case "Azul":
+            Resultado_5=Resultado_5*1000000;
+            break;
+    
+        case "Violeta":
+            Resultado_5=Resultado_5*10000000;
+            break;
+    
+        case "Gris":
+            Resultado_5=Resultado_5*100000000;
+            break;
+    
+        case "Blanco":
+            Resultado_5=Resultado_5*1000000000;
+            break;
+        
+        default:
+            Resultado_5=Resultado_5;
+        break; 
+
+    }
+
+    Resultado=parseInt(Resultado_5); //Comvierto en un entero mi Resultado
+
+    document.getElementById('mi_resultado_2').innerHTML=Resultado_5;
+
+    return Resultado_5;
+    
+    
+}
+
+function ingreso_Banda_tolerancia_5(id,value)
+{
+    Tolerancia_5= document.getElementById('Banda_tolerancia_5').value;
+
+    return Tolerancia_5;
+}
+
+    
+function Calculo_tolerancia_5Bandas()
+{
+    switch(Tolerancia_5)
+    {
+        case "Marron":
+            document.getElementById('mi_resultado_toleracia_5Bandas').innerHTML="Tolerancia ±1%";        
+            break;
+
+        case "Rojo":
+            document.getElementById('mi_resultado_toleracia_5Bandas').innerHTML="Tolerancia ±2%";
+            break;
+    
+        case "Dorado":
+            document.getElementById('mi_resultado_toleracia_5Bandas').innerHTML="Tolerancia ±5%";
+            break;
+        
+        case "Plateado":
+            document.getElementById('mi_resultado_toleracia_5Bandas').innerHTML="Tolerancia ±10%";
+            break;
+ 
+        default:
+        break;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Para 6 Bandas
+/*Abro un apartado de 6 bandas para no generar un bug con el otro cacular*/
+
+function calcular_6()
+{
+
+
+
+    //Empezamos con los switch
+
+    switch(banda_1_6)
+    {
+        case "Negro":
+            Resultado_6="0";
+            break;
+
+        case "Marron":
+            Resultado_6="1";
+            break;
+
+        case "Rojo":
+            Resultado_6="2";
+            break;
+        
+        case "Naranja":
+            Resultado_6="3";
+            break;
+
+        case "Amarillo":
+            Resultado_6="4";
+            break;
+
+        case "Verde":
+            Resultado_6="5";
+            break;
+
+        case "Azul":
+            Resultado_6="6";
+            break;
+
+        case "Violeta":
+            Resultado_6="7";
+            break;
+
+        case "Gris":
+            Resultado_6="8";
+            break;
+
+        case "Blanco":
+            Resultado_6="9";
+            break;
+        
+        default:
+            //Aqui que le mandara al usuario un aviso de que falta banda 1
+        break;
+
+    }
+
+    //Banda 2
+ 
+
+    switch(banda_2_6)
+    {
+        case "Negro":
+            Resultado_6=Resultado_6+"0";
+            break;
+    
+        case "Marron":
+            Resultado_6=Resultado_6+"1";
+            break;
+    
+        case "Rojo":
+            Resultado_6=Resultado_6+"2";
+            break;
+        
+        case "Naranja":
+            Resultado_6=Resultado_6+"3";
+            break;
+    
+        case "Amarillo":
+            Resultado_6=Resultado_6+"4";
+            break;
+    
+        case "Verde":
+            Resultado_6=Resultado_6+"5";
+            break;
+    
+        case "Azul":
+            Resultado_6=Resultado_6+"6";
+            break;
+    
+        case "Violeta":
+            Resultado_6=Resultado_6+"7";
+            break;
+    
+        case "Gris":
+            Resultado_6=Resultado_6+"8";
+            break;
+    
+        case "Blanco":
+            Resultado_6=Resultado_6+"9";
+            break;
+        
+        default:
+            //Aqui que le mandara al usuario un aviso de que falta banda 1
+        break; 
+    
+    }
+
+   //Banda 3
+   
+    switch(banda_3_6)
+    {
+        case "Negro":
+            Resultado_6=Resultado_6+"0";
+            break;
+    
+        case "Marron":
+            Resultado_6=Resultado_6+"1";
+            break;
+    
+        case "Rojo":
+            Resultado_6=Resultado_6+"2";
+            break;
+        
+        case "Naranja":
+            Resultado_6=Resultado_6+"3";
+            break;
+    
+        case "Amarillo":
+            Resultado_6=Resultado_6+"4";
+            break;
+    
+        case "Verde":
+            Resultado_6=Resultado_6+"5";
+            break;
+    
+        case "Azul":
+            Resultado_6=Resultado_6+"6";
+            break;
+    
+        case "Violeta":
+            Resultado_6=Resultado_6+"7";
+            break;
+    
+        case "Gris":
+            Resultado_6=Resultado_6+"8";
+            break;
+    
+        case "Blanco":
+            Resultado_6=Resultado_6+"9";
+            break;
+        
+        default:
+            
+        break; 
+    
+    }
+
+//Banda Multiplicadora
+
+
+
+    switch(multiplicadora_6)
+    {
+        case "Negro":
+            Resultado_6=Resultado_6;
+        break;
+
+        case "Marron":
+            Resultado_6=Resultado_6*10;
+            break;
+    
+        case "Rojo":
+            Resultado_6=Resultado_6*100;
+            break;
+        
+        case "Naranja":
+            Resultado_6=Resultado_6*1000;
+            break;
+    
+        case "Amarillo":
+            Resultado_6=Resultado_6*10000;
+            break;
+    
+        case "Verde":
+            Resultado_6=Resultado_6*100000;
+            break;
+    
+        case "Azul":
+            Resultado_6=Resultado_6*1000000;
+            break;
+    
+        case "Violeta":
+            Resultado_6=Resultado_6*10000000;
+            break;
+    
+        case "Gris":
+            Resultado_6=Resultado_6*100000000;
+            break;
+    
+        case "Blanco":
+            Resultado_6=Resultado_6*1000000000;
+            break;
+        
+        default:
+            Resultado_6=Resultado_6;
+        break; 
+
+    }
+
+    Resultado_6=parseInt(Resultado_6); //Comvierto en un entero mi Resultado
+
+    document.getElementById('mi_resultado_6').innerHTML=Resultado_6;
+
+    return Resultado_6;
+    
+    
+}
+
+
+function ingreso_Banda_tolerancia_6(id,value)
+{
+    Tolerancia_6= document.getElementById('Banda_tolerancia_6').value;
+
+    return Tolerancia_6;
+}
+
+    function Calculo_tolerancia_6Bandas()
+{
+    switch(Tolerancia_6)
+    {
+        case "Marron":
+            document.getElementById('mi_resultado_toleracia_6Bandas').innerHTML="Tolerancia ±1%";   
+        break;
+
+        case "Rojo":
+            document.getElementById('mi_resultado_toleracia_6Bandas').innerHTML="Tolerancia ±2%";
+            break;
+    
+        case "Dorado":
+            document.getElementById('mi_resultado_toleracia_6Bandas').innerHTML="Tolerancia ±5%";
+            break;
+        
+        case "Plateado":
+            document.getElementById('mi_resultado_toleracia_6Bandas').innerHTML="Tolerancia ±10%";
+            break;
+ 
+        default:
+        break;
+    }
+
+
+
+}
+
+var ppm;
+
+function ingreso_Banda_PPM(id,value)
+{
+    ppm= document.getElementById('Banda_PPM').value;
+
+    return ppm;
+}
+
+    function Calculo_ppm()
+{
+    switch(ppm)
+    {
+        case "100":
+            document.getElementById('mi_ppm').innerHTML="PPM:100(partes por millón/°C)";   
+        break;
+
+        case "50":
+            document.getElementById('mi_ppm').innerHTML="PPM:50(partes por millón/°C)"; 
+            break;
+    
+        case "15":
+            document.getElementById('mi_ppm').innerHTML="PPM:15(partes por millón/°C)"; 
+            break;
+        
+        case "25":
+            document.getElementById('mi_ppm').innerHTML="PPM:25(partes por millón/°C)"; 
+            break;
+        case "10":
+        document.getElementById('mi_ppm').innerHTML="PPM:10(partes por millón/°C)"; 
+        break;
+        case "5":
+            document.getElementById('mi_ppm').innerHTML="PPM:5(partes por millón/°C)"; 
+        break;
+        default:
+        break;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+//Activador y Descativador de Div's
+
+function ingreso_range(value)
+ {
+ 
+    if(value==4){
+ 
+        document.getElementById('4Bandas').style.display= 'grid';
+        document.getElementById('5Bandas').style.display= 'none';
+        document.getElementById('6Bandas').style.display= 'none';
+        
+
+    }if(value==5){
+        document.getElementById('4Bandas').style.display= 'none';
+        document.getElementById('5Bandas').style.display= 'grid';
+        document.getElementById('6Bandas').style.display= 'none';
+        
+    
+    }if(value==6)
+    {
+        document.getElementById('4Bandas').style.display= 'none';
+        document.getElementById('5Bandas').style.display= 'none';
+        document.getElementById('6Bandas').style.display= 'grid';
+       
+    
+    }
+ }

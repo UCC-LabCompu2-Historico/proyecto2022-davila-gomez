@@ -13,7 +13,7 @@ html
 
 body
 {
-    background-color: rgb(37, 112, 37);
+    background-color: #000000;
     background-image: url("6348.jpg");
     background-repeat: repeat;
     background-size:contain;
@@ -22,15 +22,23 @@ body
     font-family: w95fa;
     font-size:larger;
     flex-wrap: wrap;
+
+    /*Aplicacion de grilla en el Body categoria principales*/
+
+
+    display: grid;
+    grid-template-areas: "Descripcion_Historia" 
+                        "Quescodigodecolores"
+                        "Calc_Resistencias";
     
 }
 
 
 
 h1{color: white; 
-    background-color: rgb(240, 125, 42);
+    background-color:rgb(240, 125, 42);
     font-family: w95fa;
-    font: size 50px;
+    font-size: 40px;
     padding-left: 32%;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -38,7 +46,7 @@ h1{color: white;
 }
 
 h2,h3{color: white; 
-    background-color: rgb(240, 125, 42); 
+    background-color:rgb(240, 125, 42); 
     font-family: w95fa;
     
     width: 100%;
@@ -79,6 +87,7 @@ ul li {
 
     background-color: white;
     margin: 15px 15px 30px 15px;
+    padding-bottom: 10px;
 
 }
 
@@ -97,41 +106,50 @@ ul li {
 
 .indice a:hover, a:active
 {
-    color:rgb(80, 173, 80) ;
+    color:#75fd92 ;
     text-size-adjust: large;
 }
+
+
+/*CAMBIO A GRILLA///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*Descrpicion Historia*/
 
 .Descripcion_Historia{
+    grid-area: Descripcion_Historia;
     background-color: white;
     margin: 15px 15px 15px 15px;
-    padding-bottom: 2%;
+    padding-bottom: 10px;
     min-width: 250px;
     min-height: 250px;
-    overflow: auto;
+ 
+    display: grid;
+    grid-template-areas: "Descripcion_Historia_texto  Ilustracion_1";
     
 }
 
+.Descripcion_Historia_texto
+{
+    grid-area:Descripcion_Historia_texto;
+    margin: 20px 20px 10px 20px;
+    min-width: 250px;
+    min-height: 250px;
+    
+}
 .Descripcion_Historia p
 {
     text-align:justify;
-    width: 45%;
-    float: left;
-    margin-left: 20px;
-    margin-top: 15px;
-     min-width: 250px;
-     min-height: 250px;
 }
 
 .Ilustracion_1
 { 
-    width: 45%;
-    float:right;
+    
+    grid-area:Ilustracion_1;
+    max-width: 360px;
     margin-top: 15px;
     margin-right: 15px;
     padding-left: 10px;
-    min-width: 250px;
+    
   
 }
 
@@ -139,124 +157,165 @@ ul li {
 
 .Quescodigodecolores 
 {
+    grid-area: Quescodigodecolores;
     background-color: white;
     padding-bottom: 2%;
     margin: 15px 15px 15px 15px;
     min-height: 250px;
     min-width: 250px;
-    overflow: auto;
+   
+
+    display: grid;
+    grid-template-areas: "Ilustracion_2 Quecodigodecolores_texto";
+
 }
+
+.Quescodigodecolores_texto
+{
+    grid-area:Quecodigodecolores_texto;
+    margin: 15px 20px 15px 13px;
+    
+
+}
+
 
 .Quescodigodecolores p
 {
-    /*column-count: 2;
-    column-gap: 50px;*/
-
     text-align:justify;
-    width: 45%;
-    float: left;
-    margin-left: 20px;
-    margin-top: 50px;
-
-
 }
 
 .Ilustracion_2
 {
-    width: 45%;
-    float:right;
+    grid-area:Ilustracion_2;
     padding-left: 10px;
-    margin-right: 40px;
+    margin: 15px 12px 15px 15px;
+    max-width: 450px;
+    
+}
+
+/*Seleccion_De_Bandas*/
+.Seleccion_De_Bandas
+{
+    background-color: white;
+   padding: 5px 5px 10px 5px;
+    margin: 15px 15px 10px 15px;
+ 
+}
+
+.Seleccion_De_Bandas li
+{
+   
+   margin:15px 15px 15px 15px;
+   padding-right:0px;
+   padding-left:0px;    /*Estos dos ultimos son para sobrescribir la del ul li del indice */ 
+    
+}
+
+#Boton_para_Calcular_4,#Boton_para_Calcular_5,#Boton_para_Calcular_6
+{
+    margin: 15px 15px 15px 15px;
+    width: 30%;
+}
+
+#Boton_para_Calcular_4:hover,#Boton_para_Calcular_5:hover,#Boton_para_Calcular_6:hover,#Boton_para_Calcular_4:active,#Boton_para_Calcular_5:active,#Boton_para_Calcular_6:active
+{
+    background-color:   rgb(80, 173, 80) ;
     
 }
 
 
-
+.Seleccion_De_Bandas p
+{
+    margin: 15px 15px 15px 15px;
+}
 
 
 /*Calculadora de Resistrnecias */
 
-.Calc_Resistencias
+.Calc_Resistencias,.Calc_Resistencias_5,.Calc_Resistencias_6
 {
     background-color: white;
-    
+    grid-area: Calc_Resistencias;
     margin: 15px 15px 30px 15px;
-    min-height: 250px;
-    min-width: 250px;
-    overflow: auto;
+    display: grid;
+    grid-template-areas: "grilla1 Grilla2";
+   
     
 }
 
-.Calc_Resistencias p 
+
+
+.Calc_Resistencias p ,.Calc_Resistencias_5 p,.Calc_Resistencias_6 p
 {
     text-align:justify;
     width: 100%;
-    float: left;
     margin-left: 20px;
     margin-top: 30px;
 }
 
-/*El canvas*/
-#a123456 
-{
-    float: left;
-    margin-top: 20px;
-    margin-left: 300px;
-    margin-right: 32px;
-}
-
 /*El Canvas 2*/
-#myCanvas{
-    float:right;
+#myCanvas
+{
     margin-top: 20px;
     margin-left: 32px;
     margin-right: 32px;
 }
 
-#Boton_para_Calcular,#Banda_Multiplicador,#Color_segunda_banda,#Color_Primera_Banda,#Banda_tolerancia,#resultado_calc
+.Ilustracion_5
+{
+    max-width: 450px;
+    margin-top: 20px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+#Boton_para_Calcular,#Banda_PPM,#Banda_Multiplicador,#Banda_Multiplicador_5,#Banda_Multiplicador_6,#Color_segunda_banda,#Color_Primera_Banda,#Banda_tolerancia,#Color_Tercera_banda,#resultado_calc,#Color_segunda_banda_5,#Color_Primera_Banda_5,#Color_segunda_banda_6,#Color_Primera_Banda_6,#Color_Tercera_banda_6,#Banda_tolerancia_6,#Banda_tolerancia_5
 {
    
     width: 45%;
-    float: left;
+    
     margin-left: 20px;
     margin-top: 25px;
 }
 
-#Boton_para_Calcular
+#Boton_para_Calcular,#Boton_para_Calcular_con_5_bandas,#Boton_para_Calcular_con_6_bandas
 {
+    margin-left: 20px;
     margin-bottom: 30px;
+    width: 45%;
 }
+
 h5
 {
     font-family: w95fa;
     font-size: 50px;
     color: rgb(240, 125, 42);
-    float: right;
+   
     margin-left: 20px;
     margin-top: 25px;
     margin-right: 15%;
 
 }
 
-#Boton_para_Calcular:hover, #Boton_para_Calcular:active
+#Boton_para_Calcular:hover,#Boton_para_Calcular_con_5_bandas:hover, #Boton_para_Calcular:active, #Boton_para_Calcular_con_5_bandas:active, #Boton_para_Calcular_con_6_bandas:active, #Boton_para_Calcular_con_6_bandas:hover
 {
-    background-color:rgb(104, 233, 104) ;
+    background-color:   rgb(80, 173, 80) ;
 }
 
-#Color_segunda_banda:hover
+#Color_segunda_banda:hover,#Color_segunda_banda_5:hover,#Color_segunda_banda_6:hover
 {
-    background-color:rgb(104, 233, 104) ;
+    background-color:   rgb(80, 173, 80) ;
 }
 
-#Color_Primera_Banda:hover
+#Color_Primera_Banda:hover,#Color_Primera_Banda_5:hover,#Color_Primera_Banda_6:hover
 {
-    background-color:rgb(104, 233, 104) ;
+    background-color:   rgb(80, 173, 80) ;
 }
 
 
-#Banda_Multiplicador:hover
+#Banda_Multiplicador:hover,#Banda_Multiplicador_5:hover,#Banda_Multiplicador_6:hover,#Banda_PPM:hover
 {
-    background-color:rgb(104, 233, 104) ;
+    background-color:   rgb(80, 173, 80) ;
 }
 
 
@@ -275,12 +334,6 @@ h5
 }
 
 
-.Acomodar_mediante_Grilla
-{
-    display: grid;
-    grid-template-areas: "grilla1 Grilla2";
-}
-
 .grilla1 {
     grid-area: grilla1;
 
@@ -288,6 +341,11 @@ h5
 
 .Grilla2{
     grid-area: Grilla2;
+}
+
+.h5
+{
+    margin: 15px 10px 15px 20px;
 }
 
 
@@ -302,9 +360,7 @@ footer
     padding-bottom: 2%;
     background-color:white;
     margin: 15px 15px 30px 15px;
-    min-height: 250px;
-    min-width: 250px;
-    overflow: auto;
+    
 }
 
 .f-Alumnos
@@ -318,14 +374,14 @@ footer
 .f-Alumnos p
 {
     
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+    font-family:  w95fa;
     margin-left:15px;
 
 }
 
 .f-Alumnos a
 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  w95fa;
     text-decoration: none;
     margin-left:15px;
 }
@@ -345,7 +401,7 @@ footer
 .f-Alumnos h4
 {
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  w95fa;
     text-align: left;
     margin-left:10px;
     margin-top: 0px;
@@ -362,7 +418,7 @@ footer
 .f-Institucion h4
 {
     color:rgb(240, 125, 42);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  w95fa;
     text-align: left;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -393,7 +449,7 @@ footer
     {
         text-align:justify;
         width:90%;
-        float: none;
+      
         margin-left: 20px;
         margin-top: 15px;
         margin-left: 15px;
@@ -403,21 +459,23 @@ footer
     {
         text-align:justify;
         width:90%;
-        float: none;
+       
         margin-left: 20px;
         margin-top: 15px;
         margin-left: 15px;
     }
 
+    
     .Ilustracion_4
     {
         width: 200px;
     }
 
-    .Acomodar_mediante_Grilla
+.Calc_Resistencias,.Calc_Resistencias_5,.Calc_Resistencias_6
 {
     display: grid;
-    grid-template-areas: "grilla1" "Grilla2";
+    grid-template-areas: "grilla1"
+                         "Grilla2";
 }
 
 .grilla1 {
@@ -425,9 +483,16 @@ footer
 
 }
 
+.grilla1 p {
+    width: 75%;
+
+}
+
 .Grilla2{
     grid-area: Grilla2;
 }
-
 }
 
+.Grilla2 p{
+   width: 75%;
+}

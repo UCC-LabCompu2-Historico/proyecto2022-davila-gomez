@@ -43,9 +43,9 @@
 <h3 id="Definicion">Definicion</h3>
 
 <div class="Descripcion_Historia">
-<p>
+<p class="Descripcion_Historia_texto">
     Se le denomina <b>Resistencia Eléctrica</b> a la oposición al flujo de corriente eléctrica a través de un conductor.
-    ​ La unidad de resistencia en el Sistema Internacional es el ohmio y se representa con la letra griega Omega Ω, en honor al físico alemán <i>Georg Simon Ohm</i>, quien descubrió el Principio que ahora lleva su nombre. En la actualidad este componente se encuentra en casi todos los dispositivos electronicos.
+    ​ La unidad de resistencia en el Sistema Internacional es el ohmio y se representa con la letra griega Omega Ω, en honor al físico alemán <i>Georg Simon Ohm</i>, quien descubrió el Principio que ahora lleva su nombre. En la actualidad este componente se encuentra en casi todos los dispositivos electrónicos.
 </p>
 
    
@@ -66,114 +66,324 @@
 <div class="Quescodigodecolores">
 
 
-<p>
-    Podemos encontrar muchos diferentes tipos de resistencias disponibles. A lo largo de la siguiente pagina nos enfocaremos en las <b>Resistencias Fijas</b>. Para identificar o calcular el valor de una resistencia es importante tener un sistema de marcado o utilizando un aparato de medición como lo es el óhmetro. El <b>código de color de la resistencia</b> es una forma de representar el valor de la resistencia en conjunto con la tolerancia.
-    Los estándares para los registros de codificación de colores se definen en las normas <i> IEC 60062</i>, este estándar describe la codificación de colores para resistencias con extremos axiales y el código numérico para resistencias SMD.<br>
+<p class=Quescodigodecolores_texto>
+    Podemos encontrar muchos diferentes tipos de resistencias disponibles. A lo largo de la siguiente página nos enfocaremos en las <b>Resistencias Fijas</b>. Para identificar o calcular el valor de una resistencia es importante tener un sistema de marcado o utilizando un aparato de medición como lo es el óhmetro. El <b>código de color de la resistencia</b> es una forma de representar el valor de la resistencia en conjunto con la tolerancia.
+    Los estándares para los registros de codificación de colores se definen en las normas <i> IEC 60062</i>, este estándar describe la codificación de colores para resistencias con extremos axiales y el código numérico para resistencias SMD. <br>
 
     <u>Existen varias bandas para especificar el valor de la resistencia. Incluso se especifican la tolerancia, confiabilidad y tasa de falla. La cantidad de bandas varía de tres a seis.
-    </u><br>
+    </u>
+
 </p>
 
 
-<img class="Ilustracion_2" src="Ilustraciones/resistors.jpg" alt="Imagen de una tabla correspondiente al Codigo de colores de las resistecnias fijas">
+<img class="Ilustracion_2" src="Ilustraciones/Código de colores resistencias de 4,5,6 bandas.jpg" alt="Imagen de una tabla correspondiente al Codigo de colores de las resistecnias fijas">
 
 </div>
 
 
 <h3 id="Calculadora">Calculadora de Resistencias Fijas </h3>
 
+<!--Seleccion del boton del cacluladora-->
+<div class=Seleccion_De_Bandas>
 
-<!--Calculadora de Resistencias:-->
+    <p>Existen diferentes tipos de Resistencias Fijas entre ellas como pudimos ver en el código de colores es la cantidad de bandas que pueden tener. Antes de calcular tu resistencia elige la cantidad de bandas de la misma: </p>
 
-<div class="Calc_Resistencias">
-<div class="Acomodar_mediante_Grilla">
-<div class="grilla1">
-
-<!--<label for="Cuantas_Bandas"><p>Eliga el numero de bandas</p></label>
-<input type="checkbox" name="Bandas_1" id="Cuantas_Bandas" value="3 Bandas">3 Bandas
-<input type="checkbox" name="Bandas_2" id="Cuantas_Bandas" value="4 Bandas">4 Bandas
-<input type="checkbox" name="Bandas_3" id="Cuantas_Bandas" value="5 Bandas">5 Bandas-->
-
-
-   <label for="Color Primera_Banda"> <p>Elija Color de Primera banda</p> </label>
-    <select name="Colores de Banda" id="Color_Primera_Banda" onchange="ingreso_Banda_1(this.id,this.value);">
-        <option value="Negro" onclick="Negro()">Negro</option>
-        <option value="Marron" onclick="Marron()">Marron</option>
-        <option value="Rojo" onclick="Rojo()">Rojo</option>
-        <option value="Naranja" onclick="Naranja()">Naranja</option>
-        <option value="Amarillo" onclick="Amarillo()" >Amarillo</option>
-        <option value="Verde" onclick="Verde()">Verde</option>
-        <option value="Azul" onclick="Azul()">Azul</option>
-        <option value="Violeta" onclick="Violeta()">Violeta</option>
-        <option value="Gris" onclick="Gris()">Gris</option>
-        <option value="Blanco" onclick="Blanco()">Blanco</option>
-    </select>
-
-
-    <label for="Color segunda_banda"></label><p>Elija Color de Segunda banda</p></label>
-    <select name="Colores de Banda" id="Color_segunda_banda" onchange="ingreso_Banda_2(this.id,this.value);">
-        <option value="Negro" onclick="Negro1()">Negro</option>
-        <option value="Marron" onclick="Marron1()">Marron</option>
-        <option value="Rojo" onclick="Rojo1()">Rojo</option>
-        <option value="Naranja" onclick="Naranja1()">Naranja</option>
-        <option value="Amarillo" onclick="Amarillo1()" >Amarillo</option>
-        <option value="Verde" onclick="Verde1()">Verde</option>
-        <option value="Azul" onclick="Azul1()">Azul</option>
-        <option value="Violeta" onclick="Violeta1()">Violeta</option>
-        <option value="Gris" onclick="Gris1()">Gris</option>
-        <option value="Blanco" onclick="Blanco1()">Blanco</option>
-    </select>
-
-
-    <label for="Banda Multiplicador"><p>Elija Color banda Multiplicador</p></label>
-
-    <select name="Colores de Banda" id="Banda_Multiplicador" onchange="ingreso_Banda_multiplicadora(this.id,this.value);">
-        <option value="Negro" onclick="Negro2()">Negro</option>
-        <option value="Marron" onclick="Marron2()">Marron</option>
-        <option value="Rojo" onclick="Rojo2()">Rojo</option>
-        <option value="Naranja" onclick="Naranja2()">Naranja</option>
-        <option value="Amarillo" onclick="Amarillo2()" >Amarillo</option>
-        <option value="Verde" onclick="Verde2()">Verde</option>
-        <option value="Azul" onclick="Azul2()">Azul</option>
-        <option value="Violeta" onclick="Violeta2()">Violeta</option>
-        <option value="Gris" onclick="Gris2()">Gris</option>
-        <option value="Blanco" onclick="Blanco2()">Blanco</option>
-    </select>
-
-
-
-<Label for="Barra de Toleracia"><p>Elija Tolerancia - Rango de potencia</p></Label>
-<select name="Colores de Toleracia" id="Banda_tolerancia" onchange="ingreso_Banda_tolerancia(this.id,this.value);">
-    <option value="Marron" onclick="Marron3()">Marron</option>
-    <option value="Rojo" onclick="Rojo3()">Rojo</option>
-    <option value="Dorado" onclick="Dorado()">Dorado</option>
-    <option value="Plateado" onclick="Plateado()">Plateado</option>
-
-</select>
-
-
-<label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
-
-<button type="button" id="Boton_para_Calcular" onclick="calcular(); Calculo_tolerancia();" >Calcular</button>
-</div>
-<div class="Grilla2">
-<canvas id="myCanvas" class="ejer" width="450px" height="450px">
-    Tu navegador no soporta el tag de HTML5 canvas.
-</canvas>
-
-<h5>El resultado es:     <span id="mi_resultado"></span>Ω</h5>
-<h5><span id="mi_resultado_toleracia"></span></h5>
-
-</div>
-
-</div>
-
+    <ul>
+        <button type="button" id="Boton_para_Calcular_4" value="4" onclick="ingreso_range(this.value);" >4 Bandas</button>
+        <button type="button" id="Boton_para_Calcular_5"  value="5" onclick="ingreso_range(this.value); " >5 Bandas</button>
+        <button type="button" id="Boton_para_Calcular_6"  value="6" onclick="ingreso_range(this.value);" >6 Bandas</button>
+    </ul>
 </div>
 
 
 
+
+<!--Calculadora de Resistencias  4 Bandas :-->
+
+<div class="Calc_Resistencias" id="4Bandas" >
+    <div class="grilla1">
+
+       
+
+        <label for="Color Primera_Banda"> <p>Elija Color de Primera banda</p> </label>
+            <select name="Colores de Banda" id="Color_Primera_Banda" onchange="ingreso_Banda_1(this.id,this.value);">
+                <option value="Negro" onclick="Negro()">Negro</option>
+                <option value="Marron" onclick="Marron()">Marron</option>
+                <option value="Rojo" onclick="Rojo()">Rojo</option>
+                <option value="Naranja" onclick="Naranja()">Naranja</option>
+                <option value="Amarillo" onclick="Amarillo()" >Amarillo</option>
+                <option value="Verde" onclick="Verde()">Verde</option>
+                <option value="Azul" onclick="Azul()">Azul</option>
+                <option value="Violeta" onclick="Violeta()">Violeta</option>
+                <option value="Gris" onclick="Gris()">Gris</option>
+                <option value="Blanco" onclick="Blanco()">Blanco</option>
+            </select>
+
+
+            <label for="Color segunda_banda"></label><p>Elija Color de Segunda banda</p></label>
+            <select name="Colores de Banda" id="Color_segunda_banda" onchange="ingreso_Banda_2(this.id,this.value);">
+                <option value="Negro" onclick="Negro1()">Negro</option>
+                <option value="Marron" onclick="Marron1()">Marron</option>
+                <option value="Rojo" onclick="Rojo1()">Rojo</option>
+                <option value="Naranja" onclick="Naranja1()">Naranja</option>
+                <option value="Amarillo" onclick="Amarillo1()" >Amarillo</option>
+                <option value="Verde" onclick="Verde1()">Verde</option>
+                <option value="Azul" onclick="Azul1()">Azul</option>
+                <option value="Violeta" onclick="Violeta1()">Violeta</option>
+                <option value="Gris" onclick="Gris1()">Gris</option>
+                <option value="Blanco" onclick="Blanco1()">Blanco</option>
+            </select>
+
+
+            <label for="Banda Multiplicador"><p>Elija Color banda Multiplicador</p></label>
+
+            <select name="Colores de Banda" id="Banda_Multiplicador" onchange="ingreso_Banda_multiplicadora(this.id,this.value);">
+                <option value="Negro" onclick="Negro2()">Negro</option>
+                <option value="Marron" onclick="Marron2()">Marron</option>
+                <option value="Rojo" onclick="Rojo2()">Rojo</option>
+                <option value="Naranja" onclick="Naranja2()">Naranja</option>
+                <option value="Amarillo" onclick="Amarillo2()" >Amarillo</option>
+                <option value="Verde" onclick="Verde2()">Verde</option>
+                <option value="Azul" onclick="Azul2()">Azul</option>
+                <option value="Violeta" onclick="Violeta2()">Violeta</option>
+                <option value="Gris" onclick="Gris2()">Gris</option>
+                <option value="Blanco" onclick="Blanco2()">Blanco</option>
+            </select>
+
+
+
+        <Label for="Barra de Toleracia"><p>Elija Tolerancia - Rango de potencia</p></Label>
+        <select name="Colores de Toleracia" id="Banda_tolerancia" onchange="ingreso_Banda_tolerancia(this.id,this.value);">
+            <option value="Marron" onclick="Marron3()">Marron</option>
+            <option value="Rojo" onclick="Rojo3()">Rojo</option>
+            <option value="Dorado" onclick="Dorado()">Dorado</option>
+            <option value="Plateado" onclick="Plateado()">Plateado</option>
+
+        </select>
+
+
+        <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
+
+        <button type="button" id="Boton_para_Calcular" onclick="calcular(); Calculo_tolerancia();" >Calcular</button>
+    </div>
+    <div class="Grilla2">
+    <canvas id="myCanvas" class="ejer" width="450px" height="450px">
+        Tu navegador no soporta el tag de HTML5 canvas.
+    </canvas>
+    <br>
+    <h5>Resultado= <span id="mi_resultado"></span>Ω</h5>
+    <h5><span id="mi_resultado_toleracia"></span></h5>
+
+    </div>
+
+</div>
+
+
+<!--Calculadora 5 Bandas -->
+
+
+<div class="Calc_Resistencias_5" id=5Bandas style="display: none;" >
+    
+    <div class="grilla1">
+        
+       
+        
+        <label for="Color Primera_Banda"> <p>Elija Color de Primera banda</p> </label>
+            <select name="Colores de Banda" id="Color_Primera_Banda_5" onchange="ingreso_Banda_1_5(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron">Marron</option>
+                <option value="Rojo">Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul">Azul</option>
+                <option value="Violeta">Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+        
+            <label for="Color segunda_banda"></label><p>Elija Color de Segunda banda</p></label>
+            <select name="Colores de Banda" id="Color_segunda_banda_5" onchange="ingreso_Banda_2_5(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron" >Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo"  >Amarillo</option>
+                <option value="Verde">Verde</option>
+                <option value="Azul" >Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+            <label for="Color tercera_banda"></label><p>Elija Color de Terecera banda</p></label>
+            <select name="Colores de Banda" id="Color_Tercera_banda" onchange="ingreso_Banda_3(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron" >Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul">Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+            <label for="Banda Multiplicador"><p>Elija Color banda Multiplicador</p></label>
+        
+            <select name="Colores de Banda" id="Banda_Multiplicador_5" onchange="ingreso_Banda_multiplicadora_5(this.id,this.value);">
+                <option value="Negro">Negro</option>
+                <option value="Marron">Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul" >Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco">Blanco</option>
+            </select>
+        
+        
+        
+        <Label for="Barra de Toleracia"><p>Elija Tolerancia - Rango de potencia</p></Label>
+        <select name="Colores de Toleracia" id="Banda_tolerancia_5" onchange="ingreso_Banda_tolerancia_5(this.id,this.value);">
+            <option value="Marron" >Marron</option>
+            <option value="Rojo" >Rojo</option>
+            <option value="Dorado">Dorado</option>
+            <option value="Plateado" >Plateado </option>
+        
+        </select>
+        
+        <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
+        <button type="button" id="Boton_para_Calcular_con_5_bandas" onclick="calcular_5(); Calculo_tolerancia_5Bandas();" >Calcular</button>
+    </div>
+
+        <div class="Grilla2">
+            
+            <p>Por favor siga el siguiente Grafico para completar sus valores:</p>
+            <img class= "Ilustracion_5" src="Ilustraciones/resistencia-5-bandas.png" alt="Instructivo para 5 Bandas">       
+            <h5> Resultado= <span id="mi_resultado_2"></span>Ω</h5>
+            <br>
+            <h5><span id="mi_resultado_toleracia_5Bandas"></span></h5>
+        
+        </div>
+    
+</div>
+
+
+
+<!--Calculadora 6 Bandas -->
+
+
+<div class="Calc_Resistencias_6" id=6Bandas style="display: none;" >
+    
+    <div class="grilla1">
+        
+       
+        
+        <label for="Color Primera_Banda"> <p>Elija Color de Primera banda</p> </label>
+            <select name="Colores de Banda" id="Color_Primera_Banda_6" onchange="ingreso_Banda_1_6(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron">Marron</option>
+                <option value="Rojo">Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul">Azul</option>
+                <option value="Violeta">Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+        
+            <label for="Color segunda_banda"></label><p>Elija Color de Segunda banda</p></label>
+            <select name="Colores de Banda" id="Color_segunda_banda_6" onchange="ingreso_Banda_2_6(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron" >Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo"  >Amarillo</option>
+                <option value="Verde">Verde</option>
+                <option value="Azul" >Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+            <label for="Color tercera_banda"></label><p>Elija Color de Terecera banda</p></label>
+            <select name="Colores de Banda" id="Color_Tercera_banda_6" onchange="ingreso_Banda_3_6(this.id,this.value);">
+                <option value="Negro" >Negro</option>
+                <option value="Marron" >Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul">Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco" >Blanco</option>
+            </select>
+        
+            <label for="Banda Multiplicador"><p>Elija Color banda Multiplicador</p></label>
+        
+            <select name="Colores de Banda" id="Banda_Multiplicador_6" onchange="ingreso_Banda_multiplicadora_6(this.id,this.value);">
+                <option value="Negro">Negro</option>
+                <option value="Marron">Marron</option>
+                <option value="Rojo" >Rojo</option>
+                <option value="Naranja" >Naranja</option>
+                <option value="Amarillo" >Amarillo</option>
+                <option value="Verde" >Verde</option>
+                <option value="Azul" >Azul</option>
+                <option value="Violeta" >Violeta</option>
+                <option value="Gris" >Gris</option>
+                <option value="Blanco">Blanco</option>
+            </select>
+        
+        
+        
+        <Label for="Barra de Toleracia"><p>Elija Tolerancia - Rango de potencia</p></Label>
+        <select name="Colores de Toleracia" id="Banda_tolerancia_6" onchange="ingreso_Banda_tolerancia_6(this.id,this.value);">
+            <option value="Marron" >Marron</option>
+            <option value="Rojo" >Rojo</option>
+            <option value="Dorado" >Dorado</option>
+            <option value="Plateado">Plateado</option>
+        
+        </select>
+
+
+        <Label for="Barra de PPM"><p>Elija Rango PPM esto representa el coeficiente de temperatura.<br> El Coeficiente de Temperatura de la Resistencia CTR(partes por millón/°C): </p></Label>
+        <select name="Colores de Toleracia" id="Banda_PPM" onchange="ingreso_Banda_PPM(this.id,this.value);">
+            <option value="100" >Marron</option>
+            <option value="50" >Rojo</option>
+            <option value="15" >Naranja</option>
+            <option value="25">Amarillo</option>
+            <option value="10" >Azul</option>
+            <option value="5">Violeta</option>
+            
+        
+        </select>
+        
+        <label for="Boton para Calcular"><p>Presione para el calculo de su Resistencia:</p></label>
+        
+        <button type="button" id="Boton_para_Calcular_con_6_bandas" onclick="calcular_6(); Calculo_tolerancia_6Bandas(); Calculo_ppm();" >Calcular</button>
+    </div>
+        <div class="Grilla2">
+            <p>Por favor siga el siguiente Grafico para completar sus valores:</p>
+            <img class= "Ilustracion_5" src="Ilustraciones/resistencia-6-bandas.png" alt="Instructivo para 5 Bandas"> 
+            <h5> Resultado= <span id="mi_resultado_6"></span>Ω</h5>
+            <h5><span id="mi_resultado_toleracia_6Bandas"></span></h5>
+            <h5><span id="mi_ppm"></span></h5>
+    
+        </div>
+    
+</div>
+    
 </section>
 
+</body>
 
 <!--Quienes somos- LogoUcc Footer -->
 
